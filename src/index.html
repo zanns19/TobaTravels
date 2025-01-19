@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
 
@@ -8,43 +9,70 @@
     <link rel="stylesheet" href="main.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet" />
-
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.8.7/chosen.jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.8.7/chosen.min.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="./output.css"  rel="stylesheet">
+    <link href="./output.css" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="select.css">
     <title>Toba Travels</title>
 </head>
+
 <body>
     <section class="w-[100%] h-[100vh] bg-[url('images/bgfb.jpg')] bg-cover bg-center ">
-        <div class="w-[100%] h-[100vh] bg-[rgba(0,0,0,0.8)]">
-            
-        <header class="max-w-[1170px] mx-auto">
-            <div class="grid sm:grid-cols-2 grid-cols-1 px-[10px] sm:justify-end justify-start ">
-                <figure class="sm:mt-auto mt-[-46px] sm:mx-0 mx-auto sm:mb-auto mb-[-46px]" >
-                    <img src="images/logo.png" class="w-[188px]  sm:scale-125 " alt="logo" srcset="">
-                </figure>
-                <div class="flex items-center sm:justify-end  sm:mx-0 mx-auto justify-start ">
-                    <ul class="gap-[25px] flex items-center text-white ml-[-5px] sm:scale-[2] scale-[1.45]">
-                        <li><a href="https://www.facebook.com/pakrail.gov.pk/">
-                            <i class="fa-brands fa-facebook"></i></a></li>
-                        <li><a href="https://twitter.com/pakrailpk">
-                            <i class="fa-brands fa-twitter"></i></a></li>
-                         <li><a target="_blank" href="https://play.google.com/store/apps/details?id=pk.gov.railways">
-                            <i class="fa-brands fa-google-play"></i><a></li>
-                        
-                        <li class="text-white-800 font-bold"><i class="fa fa-phone"></i>117</li>
-                        
-                    </ul>
+        <div class="w-[100%] h-[100vh] bg-[rgba(0,0,0,0.6)]">
+
+            <header class="max-w-[1170px] mx-auto">
+                <div class="grid sm:grid-cols-2 grid-cols-1 px-[10px] sm:justify-end justify-start ">
+                    <figure class="sm:mt-auto mt-[-46px] sm:mx-0 mx-auto sm:mb-auto mb-[-46px]">
+                        <img src="images/logo.png" class="w-[188px]  sm:scale-125 " alt="logo" srcset="">
+                    </figure>
+                    <div class="flex items-center sm:justify-end  sm:mx-0 mx-auto justify-start ">
+                        <ul class="gap-[25px] flex items-center text-white ml-[-5px] sm:scale-[2] scale-[1.45] ">
+                            <li class="hover:scale-[2] duration-300"><a href="https://www.facebook.com/pakrail.gov.pk/">
+                                    <i class="fa-brands fa-facebook"></i></a></li>
+                            <li class="hover:scale-[2] duration-300 "><a href="https://twitter.com/pakrailpk">
+                                    <i class="fa-brands fa-twitter"></i></a></li>
+                            <li class="hover:scale-[2] duration-300 "><a target="_blank"
+                                    href="https://play.google.com/store/apps/details?id=pk.gov.railways">
+                                    <i class="fa-brands fa-google-play"></i><a></li>
+
+                            <li class="text-white-800 font-bold hover:scale-[1] duration-300"><i
+                                    class="fa fa-phone "></i>117</li>
+
+                        </ul>
+                    </div>
+                </div>
+
+            </header>
+
+            <div class="max-w-[700px] mx-auto  items-center grid grid-cols-1 sm:py-[15px] py-[30px] justify-center">
+
+                <div class="wrapper m-auto sm:w-[530px] w-[80%] ">
+                    <div class="select-btn">
+                        <span>Select Country</span>
+                        <i class="fa-solid fa-angle-down"></i>
+                    </div>
+                    <div class="content">
+                        <div class="search">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                            <input spellcheck="false" type="text" placeholder="Search">
+                        </div>
+                        <ul class="options"></ul>
+                    </div>
                 </div>
             </div>
+            </form>
+        </div>
 
-        </header>
-        
-    </div>
+        </div>
     </section>
 
 
 
-    <!-- <script src="script.js"></script> -->
+    <script src="script.js"></script>
 </body>
+
 </html>

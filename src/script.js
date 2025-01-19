@@ -15,9 +15,12 @@ let countries = ["Afghanistan", "Algeria", "Argentina", "Australia", "Bangladesh
 function addCountry(selectedCountry) {
     options.innerHTML = "";
     countries.forEach(country => {
+        
         let isSelected = country == selectedCountry ? "selected" : "";
         let li = `<li onclick="updateName(this)" class="${isSelected}">${country}</li>`;
         options.insertAdjacentHTML("beforeend", li);
+        console.log(li);
+        
     });
 }
 addCountry();
@@ -26,6 +29,11 @@ function updateName(selectedLi) {
     addCountry(selectedLi.innerText);
     wrapper.classList.remove("active");
     selectBtn.firstElementChild.innerText = selectedLi.innerText;
+    // if(selectedLi.innerText==="Afghanistan"){
+    //     console.log('Afg is Selected');
+        
+    // }
+    
 }
 searchInp.addEventListener("keyup", () => {
     let arr = [];
@@ -33,8 +41,12 @@ searchInp.addEventListener("keyup", () => {
     arr = countries.filter(data => {
         return data.toLowerCase().startsWith(searchWord);
     }).map(data => {
+    
+        
         let isSelected = data == selectBtn.firstElementChild.innerText ? "selected" : "";
         return `<li onclick="updateName(this)" class="${isSelected}">${data}</li>`;
+ 
+        
     }).join("");
     options.innerHTML = arr ? arr : `<p style="margin-top: 10px;">Oops! Country not found</p>`;
 });

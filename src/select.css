@@ -6,11 +6,11 @@
   font-family: 'Poppins', sans-serif;
 }
 body{
-  background: #4285f4;
+  background: transparent;
 }
 ::selection{
   color: #fff;
-  background: #4285f4;
+  background: none;
 }
 .wrapper{
   /* width: 420px; */

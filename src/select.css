@@ -92,6 +92,7 @@ body{
   padding-right: 7px;
 }
 .options::-webkit-scrollbar{
+  
   width: 7px;
 }
 .options::-webkit-scrollbar-track{
@@ -99,7 +100,7 @@ body{
   border-radius: 25px;
 }
 .options::-webkit-scrollbar-thumb{
-  background: transparent;
+  background: #b3b3b3;
   border-radius: 25px;
 }
 .options::-webkit-scrollbar-thumb:hover{

@@ -875,6 +875,102 @@ function updateName(selectedLi) {
       ele.textContent = "1700";
     })
   }
+  else if (selectedLi.innerText === "SADIKABAD") {
+    // Shalimar
+    Shalimar.classList.add ('hidden');
+   
+
+    //  Karakoram
+    Karakoram.classList.add ('hidden');
+    //  MILLAT
+    Millat.classList.remove ('hidden');
+    abm.forEach((ele) => {
+      ele.textContent = "3050";
+    })
+    ebm.forEach((ele) => {
+      ele.textContent = "1400";
+    })
+    esm.forEach((ele) => {
+      ele.textContent = "1350";
+    })
+    //  Pakistan
+    Pakistan.classList.remove ('hidden');
+    
+    asp.forEach((ele) => {
+      ele.textContent = "2050";
+    })
+    ebp.forEach((ele) => {
+      ele.textContent = "1350";
+    })
+    esp.forEach((ele) => {
+      ele.textContent = "1300";
+    })
+
+    //  Rehman Baba
+    Rehman.classList.add ('hidden');
+    
+  }
+  else if (selectedLi.innerText === "RAHIM YAR KHAN") {
+    // Shalimar
+    Shalimar.classList.remove ('hidden');
+    acbsh.forEach((ele) => {
+      ele.textContent = "3050";
+    })
+    apsh.forEach((ele) => {
+      ele.textContent = "2600";
+    })
+    actsh.forEach((ele) => {
+      ele.textContent = "2150";
+    })
+    ebsh.forEach((ele) => {
+      ele.textContent = "1400";
+    })
+    essh.forEach((ele) => {
+      ele.textContent = "1350";
+    })
+
+    //  Karakoram
+    Karakoram.classList.add ('hidden');
+    //  MILLAT
+    Millat.classList.remove ('hidden');
+    abm.forEach((ele) => {
+      ele.textContent = "3050";
+    })
+    ebm.forEach((ele) => {
+      ele.textContent = "1400";
+    })
+    esm.forEach((ele) => {
+      ele.textContent = "1350";
+    })
+    //  Pakistan
+    Pakistan.classList.remove ('hidden');
+    
+    asp.forEach((ele) => {
+      ele.textContent = "2050";
+    })
+    ebp.forEach((ele) => {
+      ele.textContent = "1350";
+    })
+    esp.forEach((ele) => {
+      ele.textContent = "1300";
+    })
+
+    //  Rehman Baba
+    Rehman.classList.remove ('hidden');
+    abr.forEach((ele) => {
+      ele.textContent = "2900";
+    })
+    asr.forEach((ele) => {
+      ele.textContent = "2050";
+    })
+    ebr.forEach((ele) => {
+      ele.textContent = "1350";
+    })
+    esr.forEach((ele) => {
+      ele.textContent = "1300";
+    })
+    
+  }
   // Ending of cities
   // Replace "Lahore" with the selected country in station elements
   station.forEach((element) => {
@@ -886,6 +982,7 @@ function updateName(selectedLi) {
   wrapper.classList.remove("active");
   addCountry(selectedLi.innerText);
 }
+
 
 // Filter countries as the user types
 searchInp.addEventListener("keyup", () => {

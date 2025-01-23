@@ -1,14 +1,17 @@
 jQuery('.Destination').chosen();
 
-const Shalimar =document.querySelector('.shalimar');
-const Karakoram =document.querySelector('.kara')
-const Millat =document.querySelector('.Millat')
-const Pakistan =document.querySelector('.Pakistan')
-const Rehman =document.querySelector('.Rehman')
+const Shalimar = document.querySelector('.shalimar');
+const Karakoram = document.querySelector('.kara')
+const Millat = document.querySelector('.Millat')
+const Pakistan = document.querySelector('.Pakistan')
+const Rehman = document.querySelector('.Rehman')
+const hide = document.querySelector('.trainhide');
 
 
 // Select all elements with the class "station"
 let station = document.querySelectorAll('.station');
+let train = document.querySelectorAll('.train');
+
 // Shalimar Fares
 let acbsh = document.querySelectorAll('.acbsh');
 let apsh = document.querySelectorAll('.apsh');
@@ -22,17 +25,17 @@ let actk = document.querySelectorAll('.actk');
 let ebk = document.querySelectorAll('.ebk');
 let esk = document.querySelectorAll('.esk');
 // Millat Fares
-let abm = document.querySelectorAll('.abm') 
-let ebm = document.querySelectorAll('.ebm') 
+let abm = document.querySelectorAll('.abm')
+let ebm = document.querySelectorAll('.ebm')
 let esm = document.querySelectorAll('.esm')
 // Pakistan Fares
-let asp = document.querySelectorAll('.asp') 
-let ebp = document.querySelectorAll('.ebp') 
+let asp = document.querySelectorAll('.asp')
+let ebp = document.querySelectorAll('.ebp')
 let esp = document.querySelectorAll('.esp')
 // Rehman baba Fares
-let abr = document.querySelectorAll('.abr') 
-let asr = document.querySelectorAll('.asr') 
-let ebr = document.querySelectorAll('.ebr') 
+let abr = document.querySelectorAll('.abr')
+let asr = document.querySelectorAll('.asr')
+let ebr = document.querySelectorAll('.ebr')
 let esr = document.querySelectorAll('.esr')
 
 
@@ -41,6 +44,9 @@ let esr = document.querySelectorAll('.esr')
 station.forEach((element) => {
   element.setAttribute("data-original", element.textContent);
 });
+// train.forEach((element) => {
+//   element.setAttribute("data-origin", element.textContent);
+// });
 
 // Dropdown and search input functionality
 const wrapper = document.querySelector(".wrapper"),
@@ -72,906 +78,1046 @@ function updateName(selectedLi) {
   // Update dropdown text
   selectBtn.firstElementChild.innerText = selectedLi.innerText;
 
+  function trackRemoveHidden(block) {
+    // Initialize a local counter
+    let removeHiddenCount = 0;
+
+    // Create a proxy for classList.remove
+    const originalRemove = DOMTokenList.prototype.remove;
+    DOMTokenList.prototype.remove = function (...tokens) {
+      if (tokens.includes('hidden')) {
+        removeHiddenCount++;
+      }
+      return originalRemove.apply(this, tokens);
+    };
+
+    // Execute the block of code while tracking
+    block();
+
+    // Restore the original method
+    DOMTokenList.prototype.remove = originalRemove;
+
+    // Return the count
+    return removeHiddenCount;
+  }
+  hide.classList.remove('hidden');
+
+
   // Adding Cities
 
-
+  // train.classList.remove('hidden');
 
   if (selectedLi.innerText === "LAHORE JN") {
     Millat.classList.add('hidden');
     Pakistan.classList.add('hidden');
     Rehman.classList.add('hidden');
-    // Shalimar
-    Shalimar.classList.remove ('hidden');
-    acbsh.forEach((ele) => {
-      ele.textContent = "1600";
-    })
-    apsh.forEach((ele) => {
-      ele.textContent = "1400";
-    })
-    actsh.forEach((ele) => {
-      ele.textContent = "1250";
-    })
-    ebsh.forEach((ele) => {
-      ele.textContent = "800";
-    })
-    essh.forEach((ele) => {
-      ele.textContent = "750";
+    const count = trackRemoveHidden(() => {
+      // Shalimar
+      Shalimar.classList.remove('hidden');
+      acbsh.forEach((ele) => {
+        ele.textContent = "1600";
+      })
+      apsh.forEach((ele) => {
+        ele.textContent = "1400";
+      })
+      actsh.forEach((ele) => {
+        ele.textContent = "1250";
+      })
+      ebsh.forEach((ele) => {
+        ele.textContent = "800";
+      })
+      essh.forEach((ele) => {
+        ele.textContent = "750";
+      })
+
+      //  Karakoram
+      Karakoram.classList.remove('hidden');
+      acbk.forEach((ele) => {
+        ele.textContent = "1800";
+      })
+      actk.forEach((ele) => {
+        ele.textContent = "1400";
+      })
+      ebk.forEach((ele) => {
+        ele.textContent = "1100";
+      })
+      esk.forEach((ele) => {
+        ele.textContent = "1050";
+      })
     })
 
-    //  Karakoram
-    Karakoram.classList.remove ('hidden');
-    acbk.forEach((ele) => {
-      ele.textContent = "1800";
-    })
-    actk.forEach((ele) => {
-      ele.textContent = "1400";
-    })
-    ebk.forEach((ele) => {
-      ele.textContent = "1100";
-    })
-    esk.forEach((ele) => {
-      ele.textContent = "1050";
+    train.forEach((el) => {
+      el.textContent = `(---${count} Trains Found---)`;
     })
   }
-
   else if (selectedLi.innerText === "KARACHI CANTT") {
-    // Shalimar
-    Shalimar.classList.remove ('hidden');
-    acbsh.forEach((ele) => {
-      ele.textContent = "6700";
-    })
-    apsh.forEach((ele) => {
-      ele.textContent = "6450";
-    })
-    actsh.forEach((ele) => {
-      ele.textContent = "5050";
-    })
-    ebsh.forEach((ele) => {
-      ele.textContent = "3000";
-    })
-    essh.forEach((ele) => {
-      ele.textContent = "2900";
+    const count = trackRemoveHidden(() => {
+      // Shalimar
+      Shalimar.classList.remove('hidden');
+      acbsh.forEach((ele) => {
+        ele.textContent = "6700";
+      })
+      apsh.forEach((ele) => {
+        ele.textContent = "6450";
+      })
+      actsh.forEach((ele) => {
+        ele.textContent = "5050";
+      })
+      ebsh.forEach((ele) => {
+        ele.textContent = "3000";
+      })
+      essh.forEach((ele) => {
+        ele.textContent = "2900";
+      })
+
+      //  Karakoram
+      Karakoram.classList.remove('hidden');
+      acbk.forEach((ele) => {
+        ele.textContent = "7250";
+      })
+      actk.forEach((ele) => {
+        ele.textContent = "5600";
+      })
+      ebk.forEach((ele) => {
+        ele.textContent = "3700";
+      })
+      esk.forEach((ele) => {
+        ele.textContent = "3600";
+      })
+
+      //  MILLAT
+      Millat.classList.remove('hidden');
+      abm.forEach((ele) => {
+        ele.textContent = "6700";
+      })
+      ebm.forEach((ele) => {
+        ele.textContent = "3000";
+      })
+      esm.forEach((ele) => {
+        ele.textContent = "2900";
+      })
+
+      //  Pakistan
+      Pakistan.classList.remove('hidden');
+
+      asp.forEach((ele) => {
+        ele.textContent = "4800";
+      })
+      ebp.forEach((ele) => {
+        ele.textContent = "2850";
+      })
+      esp.forEach((ele) => {
+        ele.textContent = "2750";
+      })
+
+      //  Rehman Baba
+      Rehman.classList.remove('hidden');
+      abr.forEach((ele) => {
+        ele.textContent = "6350";
+      })
+      asr.forEach((ele) => {
+        ele.textContent = "4800";
+      })
+      ebr.forEach((ele) => {
+        ele.textContent = "2850";
+      })
+      esr.forEach((ele) => {
+        ele.textContent = "2750";
+      })
     })
 
-    //  Karakoram
-    Karakoram.classList.remove ('hidden');
-    acbk.forEach((ele) => {
-      ele.textContent = "7250";
-    })
-    actk.forEach((ele) => {
-      ele.textContent = "5600";
-    })
-    ebk.forEach((ele) => {
-      ele.textContent = "3700";
-    })
-    esk.forEach((ele) => {
-      ele.textContent = "3600";
-    })
-
-    //  MILLAT
-    Millat.classList.remove ('hidden');
-    abm.forEach((ele) => {
-      ele.textContent = "6700";
-    })
-    ebm.forEach((ele) => {
-      ele.textContent = "3000";
-    })
-    esm.forEach((ele) => {
-      ele.textContent = "2900";
-    })
-
-    //  Pakistan
-    Pakistan.classList.remove ('hidden');
-    
-    asp.forEach((ele) => {
-      ele.textContent = "4800";
-    })
-    ebp.forEach((ele) => {
-      ele.textContent = "2850";
-    })
-    esp.forEach((ele) => {
-      ele.textContent = "2750";
-    })
-
-    //  Rehman Baba
-    Rehman.classList.remove ('hidden');
-    abr.forEach((ele) => {
-      ele.textContent = "6350";
-    })
-    asr.forEach((ele) => {
-      ele.textContent = "4800";
-    })
-    ebr.forEach((ele) => {
-      ele.textContent = "2850";
-    })
-    esr.forEach((ele) => {
-      ele.textContent = "2750";
+    train.forEach((el) => {
+      el.textContent = `(---${count} Trains Found---)`;
     })
   }
-
-
   else if (selectedLi.innerText === "DRIGH ROAD") {
-    // Shalimar
-    Shalimar.classList.remove ('hidden');
-    acbsh.forEach((ele) => {
-      ele.textContent = "6700";
-    })
-    apsh.forEach((ele) => {
-      ele.textContent = "6350";
-    })
-    actsh.forEach((ele) => {
-      ele.textContent = "5050";
-    })
-    ebsh.forEach((ele) => {
-      ele.textContent = "3000";
-    })
-    essh.forEach((ele) => {
-      ele.textContent = "2900";
+
+
+    const count = trackRemoveHidden(() => {
+      // Shalimar
+      Shalimar.classList.remove('hidden');
+      acbsh.forEach((ele) => {
+        ele.textContent = "6700";
+      })
+      apsh.forEach((ele) => {
+        ele.textContent = "6350";
+      })
+      actsh.forEach((ele) => {
+        ele.textContent = "5050";
+      })
+      ebsh.forEach((ele) => {
+        ele.textContent = "3000";
+      })
+      essh.forEach((ele) => {
+        ele.textContent = "2900";
+      })
+
+      //  Karakoram
+      Karakoram.classList.remove('hidden');
+      acbk.forEach((ele) => {
+        ele.textContent = "7250";
+      })
+      actk.forEach((ele) => {
+        ele.textContent = "5600";
+      })
+      ebk.forEach((ele) => {
+        ele.textContent = "3700";
+      })
+      esk.forEach((ele) => {
+        ele.textContent = "3600";
+      })
+
+      //  MILLAT
+      Millat.classList.remove('hidden');
+      abm.forEach((ele) => {
+        ele.textContent = "6700";
+      })
+      ebm.forEach((ele) => {
+        ele.textContent = "3000";
+      })
+      esm.forEach((ele) => {
+        ele.textContent = "2900";
+      })
+
+      //  Pakistan
+      Pakistan.classList.remove('hidden');
+
+      asp.forEach((ele) => {
+        ele.textContent = "4800";
+      })
+      ebp.forEach((ele) => {
+        ele.textContent = "2850";
+      })
+      esp.forEach((ele) => {
+        ele.textContent = "2750";
+      })
+
+      //  Rehman Baba
+      Rehman.classList.remove('hidden');
+      abr.forEach((ele) => {
+        ele.textContent = "6350";
+      })
+      asr.forEach((ele) => {
+        ele.textContent = "4800";
+      })
+      ebr.forEach((ele) => {
+        ele.textContent = "2850";
+      })
+      esr.forEach((ele) => {
+        ele.textContent = "2750";
+      })
     })
 
-    //  Karakoram
-    Karakoram.classList.remove ('hidden');
-    acbk.forEach((ele) => {
-      ele.textContent = "7250";
-    })
-    actk.forEach((ele) => {
-      ele.textContent = "5600";
-    })
-    ebk.forEach((ele) => {
-      ele.textContent = "3700";
-    })
-    esk.forEach((ele) => {
-      ele.textContent = "3600";
+    train.forEach((el) => {
+      el.textContent = `(---${count} Trains Found---)`;
     })
 
-    //  MILLAT
-    Millat.classList.remove ('hidden');
-    abm.forEach((ele) => {
-      ele.textContent = "6700";
-    })
-    ebm.forEach((ele) => {
-      ele.textContent = "3000";
-    })
-    esm.forEach((ele) => {
-      ele.textContent = "2900";
-    })
-
-    //  Pakistan
-    Pakistan.classList.remove ('hidden');
-    
-    asp.forEach((ele) => {
-      ele.textContent = "4800";
-    })
-    ebp.forEach((ele) => {
-      ele.textContent = "2850";
-    })
-    esp.forEach((ele) => {
-      ele.textContent = "2750";
-    })
-
-    //  Rehman Baba
-    Rehman.classList.remove ('hidden');
-    abr.forEach((ele) => {
-      ele.textContent = "6350";
-    })
-    asr.forEach((ele) => {
-      ele.textContent = "4800";
-    })
-    ebr.forEach((ele) => {
-      ele.textContent = "2850";
-    })
-    esr.forEach((ele) => {
-      ele.textContent = "2750";
-    })
   }
   else if (selectedLi.innerText === "LANDHI JN") {
-    // Shalimar
-    Shalimar.classList.remove ('hidden');
-    acbsh.forEach((ele) => {
-      ele.textContent = "6700";
-    })
-    apsh.forEach((ele) => {
-      ele.textContent = "6300";
-    })
-    actsh.forEach((ele) => {
-      ele.textContent = "4950";
-    })
-    ebsh.forEach((ele) => {
-      ele.textContent = "3000";
-    })
-    essh.forEach((ele) => {
-      ele.textContent = "2900";
+    const count = trackRemoveHidden(() => {
+      // Shalimar
+      Shalimar.classList.remove('hidden');
+      acbsh.forEach((ele) => {
+        ele.textContent = "6700";
+      })
+      apsh.forEach((ele) => {
+        ele.textContent = "6300";
+      })
+      actsh.forEach((ele) => {
+        ele.textContent = "4950";
+      })
+      ebsh.forEach((ele) => {
+        ele.textContent = "3000";
+      })
+      essh.forEach((ele) => {
+        ele.textContent = "2900";
+      })
+
+      //  Karakoram
+      Karakoram.classList.remove('hidden');
+      acbk.forEach((ele) => {
+        ele.textContent = "7250";
+      })
+      actk.forEach((ele) => {
+        ele.textContent = "5600";
+      })
+      ebk.forEach((ele) => {
+        ele.textContent = "3700";
+      })
+      esk.forEach((ele) => {
+        ele.textContent = "3600";
+      })
+
+      //  MILLAT
+      Millat.classList.remove('hidden');
+      abm.forEach((ele) => {
+        ele.textContent = "6700";
+      })
+      ebm.forEach((ele) => {
+        ele.textContent = "3000";
+      })
+      esm.forEach((ele) => {
+        ele.textContent = "2900";
+      })
+
+      //  Pakistan
+      Pakistan.classList.remove('hidden');
+
+      asp.forEach((ele) => {
+        ele.textContent = "4700";
+      })
+      ebp.forEach((ele) => {
+        ele.textContent = "2850";
+      })
+      esp.forEach((ele) => {
+        ele.textContent = "2750";
+      })
+
+      //  Rehman Baba
+      Rehman.classList.remove('hidden');
+      abr.forEach((ele) => {
+        ele.textContent = "6350";
+      })
+      asr.forEach((ele) => {
+        ele.textContent = "4700";
+      })
+      ebr.forEach((ele) => {
+        ele.textContent = "2850";
+      })
+      esr.forEach((ele) => {
+        ele.textContent = "2750";
+      })
     })
 
-    //  Karakoram
-    Karakoram.classList.remove ('hidden');
-    acbk.forEach((ele) => {
-      ele.textContent = "7250";
-    })
-    actk.forEach((ele) => {
-      ele.textContent = "5600";
-    })
-    ebk.forEach((ele) => {
-      ele.textContent = "3700";
-    })
-    esk.forEach((ele) => {
-      ele.textContent = "3600";
-    })
-
-    //  MILLAT
-    Millat.classList.remove ('hidden');
-    abm.forEach((ele) => {
-      ele.textContent = "6700";
-    })
-    ebm.forEach((ele) => {
-      ele.textContent = "3000";
-    })
-    esm.forEach((ele) => {
-      ele.textContent = "2900";
-    })
-
-    //  Pakistan
-    Pakistan.classList.remove ('hidden');
-    
-    asp.forEach((ele) => {
-      ele.textContent = "4700";
-    })
-    ebp.forEach((ele) => {
-      ele.textContent = "2850";
-    })
-    esp.forEach((ele) => {
-      ele.textContent = "2750";
-    })
-
-    //  Rehman Baba
-    Rehman.classList.remove ('hidden');
-    abr.forEach((ele) => {
-      ele.textContent = "6350";
-    })
-    asr.forEach((ele) => {
-      ele.textContent = "4700";
-    })
-    ebr.forEach((ele) => {
-      ele.textContent = "2850";
-    })
-    esr.forEach((ele) => {
-      ele.textContent = "2750";
+    train.forEach((el) => {
+      el.textContent = `(---${count} Trains Found---)`;
     })
   }
   else if (selectedLi.innerText === "HYDERABAD JN") {
-    // Shalimar
-    Shalimar.classList.remove ('hidden');
-    acbsh.forEach((ele) => {
-      ele.textContent = "5600";
-    })
-    apsh.forEach((ele) => {
-      ele.textContent = "5150";
-    })
-    actsh.forEach((ele) => {
-      ele.textContent = "4050";
-    })
-    ebsh.forEach((ele) => {
-      ele.textContent = "2350";
-    })
-    essh.forEach((ele) => {
-      ele.textContent = "2250";
+    const count = trackRemoveHidden(() => {
+      // Shalimar
+      Shalimar.classList.remove('hidden');
+      acbsh.forEach((ele) => {
+        ele.textContent = "5600";
+      })
+      apsh.forEach((ele) => {
+        ele.textContent = "5150";
+      })
+      actsh.forEach((ele) => {
+        ele.textContent = "4050";
+      })
+      ebsh.forEach((ele) => {
+        ele.textContent = "2350";
+      })
+      essh.forEach((ele) => {
+        ele.textContent = "2250";
+      })
+
+      //  Karakoram
+      Karakoram.classList.remove('hidden');
+      acbk.forEach((ele) => {
+        ele.textContent = "5950";
+      })
+      actk.forEach((ele) => {
+        ele.textContent = "4750";
+      })
+      ebk.forEach((ele) => {
+        ele.textContent = "3100";
+      })
+      esk.forEach((ele) => {
+        ele.textContent = "3000";
+      })
+
+      //  MILLAT
+      Millat.classList.remove('hidden');
+      abm.forEach((ele) => {
+        ele.textContent = "5600";
+      })
+      ebm.forEach((ele) => {
+        ele.textContent = "2350";
+      })
+      esm.forEach((ele) => {
+        ele.textContent = "2250";
+      })
+
+      //  Pakistan
+      Pakistan.classList.remove('hidden');
+
+      asp.forEach((ele) => {
+        ele.textContent = "3850";
+      })
+      ebp.forEach((ele) => {
+        ele.textContent = "2250";
+      })
+      esp.forEach((ele) => {
+        ele.textContent = "2150";
+      })
+
+      //  Rehman Baba
+      Rehman.classList.remove('hidden');
+      abr.forEach((ele) => {
+        ele.textContent = "3850";
+      })
+      asr.forEach((ele) => {
+        ele.textContent = "5300";
+      })
+      ebr.forEach((ele) => {
+        ele.textContent = "2250";
+      })
+      esr.forEach((ele) => {
+        ele.textContent = "2150";
+      })
     })
 
-    //  Karakoram
-    Karakoram.classList.remove ('hidden');
-    acbk.forEach((ele) => {
-      ele.textContent = "5950";
-    })
-    actk.forEach((ele) => {
-      ele.textContent = "4750";
-    })
-    ebk.forEach((ele) => {
-      ele.textContent = "3100";
-    })
-    esk.forEach((ele) => {
-      ele.textContent = "3000";
-    })
-
-    //  MILLAT
-    Millat.classList.remove ('hidden');
-    abm.forEach((ele) => {
-      ele.textContent = "5600";
-    })
-    ebm.forEach((ele) => {
-      ele.textContent = "2350";
-    })
-    esm.forEach((ele) => {
-      ele.textContent = "2250";
-    })
-
-    //  Pakistan
-    Pakistan.classList.remove ('hidden');
-    
-    asp.forEach((ele) => {
-      ele.textContent = "3850";
-    })
-    ebp.forEach((ele) => {
-      ele.textContent = "2250";
-    })
-    esp.forEach((ele) => {
-      ele.textContent = "2150";
-    })
-
-    //  Rehman Baba
-    Rehman.classList.remove ('hidden');
-    abr.forEach((ele) => {
-      ele.textContent = "3850";
-    })
-    asr.forEach((ele) => {
-      ele.textContent = "5300";
-    })
-    ebr.forEach((ele) => {
-      ele.textContent = "2250";
-    })
-    esr.forEach((ele) => {
-      ele.textContent = "2150";
+    train.forEach((el) => {
+      el.textContent = `(---${count} Trains Found---)`;
     })
   }
   else if (selectedLi.innerText === "TANDO ADAM") {
-    // Shalimar
-    Shalimar.classList.add ('hidden');
-    //  Karakoram
-    Karakoram.classList.add ('hidden');
-    //  MILLAT
-    Millat.classList.add ('hidden');
-    
-    //  Pakistan
-    Pakistan.classList.remove ('hidden');
-    
-    asp.forEach((ele) => {
-      ele.textContent = "3750";
-    })
-    ebp.forEach((ele) => {
-      ele.textContent = "2250";
-    })
-    esp.forEach((ele) => {
-      ele.textContent = "2150";
+    const count = trackRemoveHidden(() => {
+      // Shalimar
+      Shalimar.classList.add('hidden');
+      //  Karakoram
+      Karakoram.classList.add('hidden');
+      //  MILLAT
+      Millat.classList.add('hidden');
+
+      //  Pakistan
+      Pakistan.classList.remove('hidden');
+
+      asp.forEach((ele) => {
+        ele.textContent = "3750";
+      })
+      ebp.forEach((ele) => {
+        ele.textContent = "2250";
+      })
+      esp.forEach((ele) => {
+        ele.textContent = "2150";
+      })
+
+      //  Rehman Baba
+      Rehman.classList.remove('hidden');
+      abr.forEach((ele) => {
+        ele.textContent = "5300";
+      })
+      asr.forEach((ele) => {
+        ele.textContent = "3750";
+      })
+      ebr.forEach((ele) => {
+        ele.textContent = "2250";
+      })
+      esr.forEach((ele) => {
+        ele.textContent = "2150";
+      })
     })
 
-    //  Rehman Baba
-    Rehman.classList.remove ('hidden');
-    abr.forEach((ele) => {
-      ele.textContent = "5300";
-    })
-    asr.forEach((ele) => {
-      ele.textContent = "3750";
-    })
-    ebr.forEach((ele) => {
-      ele.textContent = "2250";
-    })
-    esr.forEach((ele) => {
-      ele.textContent = "2150";
+    train.forEach((el) => {
+      el.textContent = `(---${count} Trains Found---)`;
     })
   }
   else if (selectedLi.innerText === "SHAHDADPUR") {
-    // Shalimar
-    Shalimar.classList.add ('hidden');
-    //  Karakoram
-    Karakoram.classList.add ('hidden');
-    //  MILLAT
-    Millat.classList.remove ('hidden');
-    abm.forEach((ele) => {
-      ele.textContent = "5600";
+    const count = trackRemoveHidden(() => {
+      // Shalimar
+      Shalimar.classList.add('hidden');
+      //  Karakoram
+      Karakoram.classList.add('hidden');
+      //  MILLAT
+      Millat.classList.remove('hidden');
+      abm.forEach((ele) => {
+        ele.textContent = "5600";
+      })
+      ebm.forEach((ele) => {
+        ele.textContent = "2350";
+      })
+      esm.forEach((ele) => {
+        ele.textContent = "2250";
+      })
+
+      //  Pakistan
+      Pakistan.classList.add('hidden');
+
+      //  Rehman Baba
+      Rehman.classList.add('hidden');
     })
-    ebm.forEach((ele) => {
-      ele.textContent = "2350";
+
+    train.forEach((el) => {
+      el.textContent = `(---${count} Trains Found---)`;
     })
-    esm.forEach((ele) => {
-      ele.textContent = "2250";
-    })
-    
-    //  Pakistan
-    Pakistan.classList.add ('hidden');
-    
-   //  Rehman Baba
-    Rehman.classList.add ('hidden');
-    
+
   }
   else if (selectedLi.innerText === "NAWABSHAH JN") {
-    // Shalimar
-    Shalimar.classList.remove ('hidden');
-    acbsh.forEach((ele) => {
-      ele.textContent = "5000";
+    const count = trackRemoveHidden(() => {
+      // Shalimar
+      Shalimar.classList.remove('hidden');
+      acbsh.forEach((ele) => {
+        ele.textContent = "5000";
+      })
+      apsh.forEach((ele) => {
+        ele.textContent = "4650";
+      })
+      actsh.forEach((ele) => {
+        ele.textContent = "3800";
+      })
+      ebsh.forEach((ele) => {
+        ele.textContent = "2150";
+      })
+      essh.forEach((ele) => {
+        ele.textContent = "2050";
+      })
+      //  Karakoram
+      Karakoram.classList.add('hidden');
+      //  MILLAT
+      Millat.classList.remove('hidden');
+      abm.forEach((ele) => {
+        ele.textContent = "5000";
+      })
+      ebm.forEach((ele) => {
+        ele.textContent = "2150";
+      })
+      esm.forEach((ele) => {
+        ele.textContent = "2050";
+      })
+
+      //  Pakistan
+      Pakistan.classList.add('hidden');
+
+      //  Rehman Baba
+      Rehman.classList.remove('hidden');
+      abr.forEach((ele) => {
+        ele.textContent = "4750";
+      })
+      asr.forEach((ele) => {
+        ele.textContent = "3600";
+      })
+      ebr.forEach((ele) => {
+        ele.textContent = "2050";
+      })
+      esr.forEach((ele) => {
+        ele.textContent = "1950";
+      })
     })
-    apsh.forEach((ele) => {
-      ele.textContent = "4650";
-    })
-    actsh.forEach((ele) => {
-      ele.textContent = "3800";
-    })
-    ebsh.forEach((ele) => {
-      ele.textContent = "2150";
-    })
-    essh.forEach((ele) => {
-      ele.textContent = "2050";
-    })
-    //  Karakoram
-    Karakoram.classList.add ('hidden');
-    //  MILLAT
-    Millat.classList.remove ('hidden');
-    abm.forEach((ele) => {
-      ele.textContent = "5000";
-    })
-    ebm.forEach((ele) => {
-      ele.textContent = "2150";
-    })
-    esm.forEach((ele) => {
-      ele.textContent = "2050";
-    })
-    
-    //  Pakistan
-    Pakistan.classList.add ('hidden');
-    
-    //  Rehman Baba
-    Rehman.classList.remove ('hidden');
-    abr.forEach((ele) => {
-      ele.textContent = "4750";
-    })
-    asr.forEach((ele) => {
-      ele.textContent = "3600";
-    })
-    ebr.forEach((ele) => {
-      ele.textContent = "2050";
-    })
-    esr.forEach((ele) => {
-      ele.textContent = "1950";
+
+    train.forEach((el) => {
+      el.textContent = `(---${count} Trains Found---)`;
     })
   }
   else if (selectedLi.innerText === "DAUR") {
-    // Shalimar
-    Shalimar.classList.add ('hidden');
-    
-    //  Karakoram
-    Karakoram.classList.add ('hidden');
-    //  MILLAT
-    Millat.classList.remove ('hidden');
-    abm.forEach((ele) => {
-      ele.textContent = "5000";
+    const count = trackRemoveHidden(() => {
+      // Shalimar
+      Shalimar.classList.add('hidden');
+
+      //  Karakoram
+      Karakoram.classList.add('hidden');
+      //  MILLAT
+      Millat.classList.remove('hidden');
+      abm.forEach((ele) => {
+        ele.textContent = "5000";
+      })
+      ebm.forEach((ele) => {
+        ele.textContent = "2150";
+      })
+      esm.forEach((ele) => {
+        ele.textContent = "2050";
+      })
+
+      //  Pakistan
+      Pakistan.classList.add('hidden');
+
+      //  Rehman Baba
+      Rehman.classList.remove('hidden');
+      abr.forEach((ele) => {
+        ele.textContent = "4750";
+      })
+      asr.forEach((ele) => {
+        ele.textContent = "3600";
+      })
+      ebr.forEach((ele) => {
+        ele.textContent = "2050";
+      })
+      esr.forEach((ele) => {
+        ele.textContent = "1950";
+      })
     })
-    ebm.forEach((ele) => {
-      ele.textContent = "2150";
-    })
-    esm.forEach((ele) => {
-      ele.textContent = "2050";
-    })
-    
-    //  Pakistan
-    Pakistan.classList.add ('hidden');
-    
-    //  Rehman Baba
-    Rehman.classList.remove ('hidden');
-    abr.forEach((ele) => {
-      ele.textContent = "4750";
-    })
-    asr.forEach((ele) => {
-      ele.textContent = "3600";
-    })
-    ebr.forEach((ele) => {
-      ele.textContent = "2050";
-    })
-    esr.forEach((ele) => {
-      ele.textContent = "1950";
+
+    train.forEach((el) => {
+      el.textContent = `(---${count} Trains Found---)`;
     })
   }
   else if (selectedLi.innerText === "PADIDAN") {
-    // Shalimar
-    Shalimar.classList.add ('hidden');
-    
-    //  Karakoram
-    Karakoram.classList.add ('hidden');
-    //  MILLAT
-    Millat.classList.add ('hidden');
-    
-    
-    //  Pakistan
-    Pakistan.classList.remove ('hidden');
-    
-    asp.forEach((ele) => {
-      ele.textContent = "3550";
+    const count = trackRemoveHidden(() => {
+      // Shalimar
+      Shalimar.classList.add('hidden');
+
+      //  Karakoram
+      Karakoram.classList.add('hidden');
+      //  MILLAT
+      Millat.classList.add('hidden');
+
+
+      //  Pakistan
+      Pakistan.classList.remove('hidden');
+
+      asp.forEach((ele) => {
+        ele.textContent = "3550";
+      })
+      ebp.forEach((ele) => {
+        ele.textContent = "2050";
+      })
+      esp.forEach((ele) => {
+        ele.textContent = "1950";
+      })
+
+      //  Rehman Baba
+      Rehman.classList.remove('hidden');
+      abr.forEach((ele) => {
+        ele.textContent = "4750";
+      })
+      asr.forEach((ele) => {
+        ele.textContent = "3550";
+      })
+      ebr.forEach((ele) => {
+        ele.textContent = "2050";
+      })
+      esr.forEach((ele) => {
+        ele.textContent = "1950";
+      })
     })
-    ebp.forEach((ele) => {
-      ele.textContent = "2050";
-    })
-    esp.forEach((ele) => {
-      ele.textContent = "1950";
-    })
-    
-    //  Rehman Baba
-    Rehman.classList.remove ('hidden');
-    abr.forEach((ele) => {
-      ele.textContent = "4750";
-    })
-    asr.forEach((ele) => {
-      ele.textContent = "3550";
-    })
-    ebr.forEach((ele) => {
-      ele.textContent = "2050";
-    })
-    esr.forEach((ele) => {
-      ele.textContent = "1950";
+
+    train.forEach((el) => {
+      el.textContent = `(---${count} Trains Found---)`;
     })
   }
   else if (selectedLi.innerText === "BHIRIA ROAD") {
-    // Shalimar
-    Shalimar.classList.add ('hidden');
-    
-    //  Karakoram
-    Karakoram.classList.add ('hidden');
-    //  MILLAT
-    Millat.classList.remove ('hidden');
-    abm.forEach((ele) => {
-      ele.textContent = "5000";
+    const count = trackRemoveHidden(() => {
+      // Shalimar
+      Shalimar.classList.add('hidden');
+
+      //  Karakoram
+      Karakoram.classList.add('hidden');
+      //  MILLAT
+      Millat.classList.remove('hidden');
+      abm.forEach((ele) => {
+        ele.textContent = "5000";
+      })
+      ebm.forEach((ele) => {
+        ele.textContent = "2100";
+      })
+      esm.forEach((ele) => {
+        ele.textContent = "2000";
+      })
+
+      //  Pakistan
+      Pakistan.classList.add('hidden');
+
+      //  Rehman Baba
+      Rehman.classList.remove('hidden');
+      abr.forEach((ele) => {
+        ele.textContent = "4750";
+      })
+      asr.forEach((ele) => {
+        ele.textContent = "3550";
+      })
+      ebr.forEach((ele) => {
+        ele.textContent = "2000";
+      })
+      esr.forEach((ele) => {
+        ele.textContent = "1900";
+      })
     })
-    ebm.forEach((ele) => {
-      ele.textContent = "2100";
-    })
-    esm.forEach((ele) => {
-      ele.textContent = "2000";
-    })
-    
-    //  Pakistan
-    Pakistan.classList.add ('hidden');
-    
-    //  Rehman Baba
-    Rehman.classList.remove ('hidden');
-    abr.forEach((ele) => {
-      ele.textContent = "4750";
-    })
-    asr.forEach((ele) => {
-      ele.textContent = "3550";
-    })
-    ebr.forEach((ele) => {
-      ele.textContent = "2000";
-    })
-    esr.forEach((ele) => {
-      ele.textContent = "1900";
+
+    train.forEach((el) => {
+      el.textContent = `(---${count} Trains Found---)`;
     })
   }
   else if (selectedLi.innerText === "LAKHA ROAD") {
-    // Shalimar
-    Shalimar.classList.add ('hidden');
-    
-    //  Karakoram
-    Karakoram.classList.add ('hidden');
-    //  MILLAT
-    Millat.classList.add ('hidden');
-    
-    //  Pakistan
-    Pakistan.classList.add ('hidden');
-    
-    //  Rehman Baba
-    Rehman.classList.remove ('hidden');
-    abr.forEach((ele) => {
-      ele.textContent = "4350";
+    const count = trackRemoveHidden(() => {
+      // Shalimar
+      Shalimar.classList.add('hidden');
+
+      //  Karakoram
+      Karakoram.classList.add('hidden');
+      //  MILLAT
+      Millat.classList.add('hidden');
+
+      //  Pakistan
+      Pakistan.classList.add('hidden');
+
+      //  Rehman Baba
+      Rehman.classList.remove('hidden');
+      abr.forEach((ele) => {
+        ele.textContent = "4350";
+      })
+      asr.forEach((ele) => {
+        ele.textContent = "3350";
+      })
+      ebr.forEach((ele) => {
+        ele.textContent = "2000";
+      })
+      esr.forEach((ele) => {
+        ele.textContent = "1900";
+      })
     })
-    asr.forEach((ele) => {
-      ele.textContent = "3350";
-    })
-    ebr.forEach((ele) => {
-      ele.textContent = "2000";
-    })
-    esr.forEach((ele) => {
-      ele.textContent = "1900";
+
+    train.forEach((el) => {
+      el.textContent = `(---${count} Trains Found---)`;
     })
   }
   else if (selectedLi.innerText === "MAHRABPUR") {
-    // Shalimar
-    Shalimar.classList.add ('hidden');
-    
-    //  Karakoram
-    Karakoram.classList.add ('hidden');
-    //  MILLAT
-    Millat.classList.remove ('hidden');
-    abm.forEach((ele) => {
-      ele.textContent = "4600";
+    const count = trackRemoveHidden(() => {
+      // Shalimar
+      Shalimar.classList.add('hidden');
+
+      //  Karakoram
+      Karakoram.classList.add('hidden');
+      //  MILLAT
+      Millat.classList.remove('hidden');
+      abm.forEach((ele) => {
+        ele.textContent = "4600";
+      })
+      ebm.forEach((ele) => {
+        ele.textContent = "2100";
+      })
+      esm.forEach((ele) => {
+        ele.textContent = "2000";
+      })
+
+      //  Pakistan
+      Pakistan.classList.add('hidden');
+
+      //  Rehman Baba
+      Rehman.classList.remove('hidden');
+      abr.forEach((ele) => {
+        ele.textContent = "4350";
+      })
+      asr.forEach((ele) => {
+        ele.textContent = "3500";
+      })
+      ebr.forEach((ele) => {
+        ele.textContent = "2000";
+      })
+      esr.forEach((ele) => {
+        ele.textContent = "1900";
+      })
     })
-    ebm.forEach((ele) => {
-      ele.textContent = "2100";
-    })
-    esm.forEach((ele) => {
-      ele.textContent = "2000";
-    })
-    
-    //  Pakistan
-    Pakistan.classList.add ('hidden');
-    
-    //  Rehman Baba
-    Rehman.classList.remove ('hidden');
-    abr.forEach((ele) => {
-      ele.textContent = "4350";
-    })
-    asr.forEach((ele) => {
-      ele.textContent = "3500";
-    })
-    ebr.forEach((ele) => {
-      ele.textContent = "2000";
-    })
-    esr.forEach((ele) => {
-      ele.textContent = "1900";
+
+    train.forEach((el) => {
+      el.textContent = `(---${count} Trains Found---)`;
     })
   }
   else if (selectedLi.innerText === "SETHARJA") {
-    // Shalimar
-    Shalimar.classList.add ('hidden');
-    
-    //  Karakoram
-    Karakoram.classList.add ('hidden');
-    //  MILLAT
-    Millat.classList.add ('hidden');
-    
-    //  Pakistan
-    Pakistan.classList.add ('hidden');
-    
-    //  Rehman Baba
-    Rehman.classList.remove ('hidden');
-    abr.forEach((ele) => {
-      ele.textContent = "4350";
+    const count = trackRemoveHidden(() => {
+      // Shalimar
+      Shalimar.classList.add('hidden');
+
+      //  Karakoram
+      Karakoram.classList.add('hidden');
+      //  MILLAT
+      Millat.classList.add('hidden');
+
+      //  Pakistan
+      Pakistan.classList.add('hidden');
+
+      //  Rehman Baba
+      Rehman.classList.remove('hidden');
+      abr.forEach((ele) => {
+        ele.textContent = "4350";
+      })
+      asr.forEach((ele) => {
+        ele.textContent = "3350";
+      })
+      ebr.forEach((ele) => {
+        ele.textContent = "1950";
+      })
+      esr.forEach((ele) => {
+        ele.textContent = "1850";
+      })
     })
-    asr.forEach((ele) => {
-      ele.textContent = "3350";
-    })
-    ebr.forEach((ele) => {
-      ele.textContent = "1950";
-    })
-    esr.forEach((ele) => {
-      ele.textContent = "1850";
+
+    train.forEach((el) => {
+      el.textContent = `(---${count} Trains Found---)`;
     })
   }
   else if (selectedLi.innerText === "ROHRI JN") {
-    // Shalimar
-    Shalimar.classList.remove ('hidden');
-    acbsh.forEach((ele) => {
-      ele.textContent = "3900";
-    })
-    apsh.forEach((ele) => {
-      ele.textContent = "3300";
-    })
-    actsh.forEach((ele) => {
-      ele.textContent = "2950";
-    })
-    ebsh.forEach((ele) => {
-      ele.textContent = "1950";
-    })
-    essh.forEach((ele) => {
-      ele.textContent = "1850";
+    const count = trackRemoveHidden(() => {
+      // Shalimar
+      Shalimar.classList.remove('hidden');
+      acbsh.forEach((ele) => {
+        ele.textContent = "3900";
+      })
+      apsh.forEach((ele) => {
+        ele.textContent = "3300";
+      })
+      actsh.forEach((ele) => {
+        ele.textContent = "2950";
+      })
+      ebsh.forEach((ele) => {
+        ele.textContent = "1950";
+      })
+      essh.forEach((ele) => {
+        ele.textContent = "1850";
+      })
+
+      //  Karakoram
+      Karakoram.classList.remove('hidden');
+      acbk.forEach((ele) => {
+        ele.textContent = "4200";
+      })
+      actk.forEach((ele) => {
+        ele.textContent = "3500";
+      })
+      ebk.forEach((ele) => {
+        ele.textContent = "2350";
+      })
+      esk.forEach((ele) => {
+        ele.textContent = "2250";
+      })
+
+      //  MILLAT
+      Millat.classList.remove('hidden');
+      abm.forEach((ele) => {
+        ele.textContent = "3900";
+      })
+      ebm.forEach((ele) => {
+        ele.textContent = "1950";
+      })
+      esm.forEach((ele) => {
+        ele.textContent = "1850";
+      })
+
+      //  Pakistan
+      Pakistan.classList.remove('hidden');
+
+      asp.forEach((ele) => {
+        ele.textContent = "2800";
+      })
+      ebp.forEach((ele) => {
+        ele.textContent = "1850";
+      })
+      esp.forEach((ele) => {
+        ele.textContent = "1750";
+      })
+
+      //  Rehman Baba
+      Rehman.classList.remove('hidden');
+      abr.forEach((ele) => {
+        ele.textContent = "3700";
+      })
+      asr.forEach((ele) => {
+        ele.textContent = "2800";
+      })
+      ebr.forEach((ele) => {
+        ele.textContent = "1850";
+      })
+      esr.forEach((ele) => {
+        ele.textContent = "1750";
+      })
     })
 
-    //  Karakoram
-    Karakoram.classList.remove ('hidden');
-    acbk.forEach((ele) => {
-      ele.textContent = "4200";
-    })
-    actk.forEach((ele) => {
-      ele.textContent = "3500";
-    })
-    ebk.forEach((ele) => {
-      ele.textContent = "2350";
-    })
-    esk.forEach((ele) => {
-      ele.textContent = "2250";
-    })
-
-    //  MILLAT
-    Millat.classList.remove ('hidden');
-    abm.forEach((ele) => {
-      ele.textContent = "3900";
-    })
-    ebm.forEach((ele) => {
-      ele.textContent = "1950";
-    })
-    esm.forEach((ele) => {
-      ele.textContent = "1850";
-    })
-
-    //  Pakistan
-    Pakistan.classList.remove ('hidden');
-    
-    asp.forEach((ele) => {
-      ele.textContent = "2800";
-    })
-    ebp.forEach((ele) => {
-      ele.textContent = "1850";
-    })
-    esp.forEach((ele) => {
-      ele.textContent = "1750";
-    })
-
-    //  Rehman Baba
-    Rehman.classList.remove ('hidden');
-    abr.forEach((ele) => {
-      ele.textContent = "3700";
-    })
-    asr.forEach((ele) => {
-      ele.textContent = "2800";
-    })
-    ebr.forEach((ele) => {
-      ele.textContent = "1850";
-    })
-    esr.forEach((ele) => {
-      ele.textContent = "1750";
+    train.forEach((el) => {
+      el.textContent = `(---${count} Trains Found---)`;
     })
   }
   else if (selectedLi.innerText === "PANO AKIL") {
-    // Shalimar
-    Shalimar.classList.add ('hidden');
-    
-    //  Karakoram
-    Karakoram.classList.add ('hidden');
-    //  MILLAT
-    Millat.classList.add ('hidden');
-    
-    //  Pakistan
-    Pakistan.classList.add ('hidden');
-    
-    //  Rehman Baba
-    Rehman.classList.remove ('hidden');
-    abr.forEach((ele) => {
-      ele.textContent = "3700";
+    const count = trackRemoveHidden(() => {
+      // Shalimar
+      Shalimar.classList.add('hidden');
+
+      //  Karakoram
+      Karakoram.classList.add('hidden');
+      //  MILLAT
+      Millat.classList.add('hidden');
+
+      //  Pakistan
+      Pakistan.classList.add('hidden');
+
+      //  Rehman Baba
+      Rehman.classList.remove('hidden');
+      abr.forEach((ele) => {
+        ele.textContent = "3700";
+      })
+      asr.forEach((ele) => {
+        ele.textContent = "2750";
+      })
+      ebr.forEach((ele) => {
+        ele.textContent = "1850";
+      })
+      esr.forEach((ele) => {
+        ele.textContent = "1750";
+      })
     })
-    asr.forEach((ele) => {
-      ele.textContent = "2750";
-    })
-    ebr.forEach((ele) => {
-      ele.textContent = "1850";
-    })
-    esr.forEach((ele) => {
-      ele.textContent = "1750";
+
+    train.forEach((el) => {
+      el.textContent = `(---${count} Trains Found---)`;
     })
   }
   else if (selectedLi.innerText === "GHOTKI") {
-    // Shalimar
-    Shalimar.classList.remove ('hidden');
-   acbsh.forEach((ele) => {
-      ele.textContent = "3900";
-    })
-    apsh.forEach((ele) => {
-      ele.textContent = "3100";
-    })
-    actsh.forEach((ele) => {
-      ele.textContent = "2900";
-    })
-    ebsh.forEach((ele) => {
-      ele.textContent = "1900";
-    })
-    essh.forEach((ele) => {
-      ele.textContent = "1800";
+    const count = trackRemoveHidden(() => {
+      // Shalimar
+      Shalimar.classList.remove('hidden');
+      acbsh.forEach((ele) => {
+        ele.textContent = "3900";
+      })
+      apsh.forEach((ele) => {
+        ele.textContent = "3100";
+      })
+      actsh.forEach((ele) => {
+        ele.textContent = "2900";
+      })
+      ebsh.forEach((ele) => {
+        ele.textContent = "1900";
+      })
+      essh.forEach((ele) => {
+        ele.textContent = "1800";
+      })
+
+      //  Karakoram
+      Karakoram.classList.add('hidden');
+      //  MILLAT
+      Millat.classList.add('hidden');
+
+      //  Pakistan
+      Pakistan.classList.remove('hidden');
+
+      asp.forEach((ele) => {
+        ele.textContent = "2750";
+      })
+      ebp.forEach((ele) => {
+        ele.textContent = "1800";
+      })
+      esp.forEach((ele) => {
+        ele.textContent = "1700";
+      })
+
+      //  Rehman Baba
+      Rehman.classList.remove('hidden');
+      abr.forEach((ele) => {
+        ele.textContent = "3700";
+      })
+      asr.forEach((ele) => {
+        ele.textContent = "2750";
+      })
+      ebr.forEach((ele) => {
+        ele.textContent = "1800";
+      })
+      esr.forEach((ele) => {
+        ele.textContent = "1700";
+      })
     })
 
-    //  Karakoram
-    Karakoram.classList.add ('hidden');
-    //  MILLAT
-    Millat.classList.add ('hidden');
-    
-    //  Pakistan
-    Pakistan.classList.remove ('hidden');
-    
-    asp.forEach((ele) => {
-      ele.textContent = "2750";
-    })
-    ebp.forEach((ele) => {
-      ele.textContent = "1800";
-    })
-    esp.forEach((ele) => {
-      ele.textContent = "1700";
-    })
-
-    //  Rehman Baba
-    Rehman.classList.remove ('hidden');
-    abr.forEach((ele) => {
-      ele.textContent = "3700";
-    })
-    asr.forEach((ele) => {
-      ele.textContent = "2750";
-    })
-    ebr.forEach((ele) => {
-      ele.textContent = "1800";
-    })
-    esr.forEach((ele) => {
-      ele.textContent = "1700";
+    train.forEach((el) => {
+      el.textContent = `(---${count} Trains Found---)`;
     })
   }
   else if (selectedLi.innerText === "SADIKABAD") {
-    // Shalimar
-    Shalimar.classList.add ('hidden');
-   
+    const count = trackRemoveHidden(() => {
+      // Shalimar
+      Shalimar.classList.add('hidden');
 
-    //  Karakoram
-    Karakoram.classList.add ('hidden');
-    //  MILLAT
-    Millat.classList.remove ('hidden');
-    abm.forEach((ele) => {
-      ele.textContent = "3050";
-    })
-    ebm.forEach((ele) => {
-      ele.textContent = "1400";
-    })
-    esm.forEach((ele) => {
-      ele.textContent = "1350";
-    })
-    //  Pakistan
-    Pakistan.classList.remove ('hidden');
-    
-    asp.forEach((ele) => {
-      ele.textContent = "2050";
-    })
-    ebp.forEach((ele) => {
-      ele.textContent = "1350";
-    })
-    esp.forEach((ele) => {
-      ele.textContent = "1300";
+
+      //  Karakoram
+      Karakoram.classList.add('hidden');
+      //  MILLAT
+      Millat.classList.remove('hidden');
+      abm.forEach((ele) => {
+        ele.textContent = "3050";
+      })
+      ebm.forEach((ele) => {
+        ele.textContent = "1400";
+      })
+      esm.forEach((ele) => {
+        ele.textContent = "1350";
+      })
+      //  Pakistan
+      Pakistan.classList.remove('hidden');
+
+      asp.forEach((ele) => {
+        ele.textContent = "2050";
+      })
+      ebp.forEach((ele) => {
+        ele.textContent = "1350";
+      })
+      esp.forEach((ele) => {
+        ele.textContent = "1300";
+      })
+
+      //  Rehman Baba
+      Rehman.classList.add('hidden');
     })
 
-    //  Rehman Baba
-    Rehman.classList.add ('hidden');
-    
+    train.forEach((el) => {
+      el.textContent = `(---${count} Trains Found---)`;
+    })
   }
   else if (selectedLi.innerText === "RAHIM YAR KHAN") {
-    // Shalimar
-    Shalimar.classList.remove ('hidden');
-    acbsh.forEach((ele) => {
-      ele.textContent = "3050";
-    })
-    apsh.forEach((ele) => {
-      ele.textContent = "2600";
-    })
-    actsh.forEach((ele) => {
-      ele.textContent = "2150";
-    })
-    ebsh.forEach((ele) => {
-      ele.textContent = "1400";
-    })
-    essh.forEach((ele) => {
-      ele.textContent = "1350";
+    const count = trackRemoveHidden(() => {
+      // Shalimar
+      Shalimar.classList.remove('hidden');
+      acbsh.forEach((ele) => {
+        ele.textContent = "3050";
+      })
+      apsh.forEach((ele) => {
+        ele.textContent = "2600";
+      })
+      actsh.forEach((ele) => {
+        ele.textContent = "2150";
+      })
+      ebsh.forEach((ele) => {
+        ele.textContent = "1400";
+      })
+      essh.forEach((ele) => {
+        ele.textContent = "1350";
+      })
+
+      //  Karakoram
+      Karakoram.classList.add('hidden');
+      //  MILLAT
+      Millat.classList.remove('hidden');
+      abm.forEach((ele) => {
+        ele.textContent = "3050";
+      })
+      ebm.forEach((ele) => {
+        ele.textContent = "1400";
+      })
+      esm.forEach((ele) => {
+        ele.textContent = "1350";
+      })
+      //  Pakistan
+      Pakistan.classList.remove('hidden');
+
+      asp.forEach((ele) => {
+        ele.textContent = "2050";
+      })
+      ebp.forEach((ele) => {
+        ele.textContent = "1350";
+      })
+      esp.forEach((ele) => {
+        ele.textContent = "1300";
+      })
+
+      //  Rehman Baba
+      Rehman.classList.remove('hidden');
+      abr.forEach((ele) => {
+        ele.textContent = "2900";
+      })
+      asr.forEach((ele) => {
+        ele.textContent = "2050";
+      })
+      ebr.forEach((ele) => {
+        ele.textContent = "1350";
+      })
+      esr.forEach((ele) => {
+        ele.textContent = "1300";
+      })
     })
 
-    //  Karakoram
-    Karakoram.classList.add ('hidden');
-    //  MILLAT
-    Millat.classList.remove ('hidden');
-    abm.forEach((ele) => {
-      ele.textContent = "3050";
-    })
-    ebm.forEach((ele) => {
-      ele.textContent = "1400";
-    })
-    esm.forEach((ele) => {
-      ele.textContent = "1350";
-    })
-    //  Pakistan
-    Pakistan.classList.remove ('hidden');
-    
-    asp.forEach((ele) => {
-      ele.textContent = "2050";
-    })
-    ebp.forEach((ele) => {
-      ele.textContent = "1350";
-    })
-    esp.forEach((ele) => {
-      ele.textContent = "1300";
+    train.forEach((el) => {
+      el.textContent = `(---${count} Trains Found---)`;
     })
 
-    //  Rehman Baba
-    Rehman.classList.remove ('hidden');
-    abr.forEach((ele) => {
-      ele.textContent = "2900";
-    })
-    asr.forEach((ele) => {
-      ele.textContent = "2050";
-    })
-    ebr.forEach((ele) => {
-      ele.textContent = "1350";
-    })
-    esr.forEach((ele) => {
-      ele.textContent = "1300";
-    })
-    
   }
   // Ending of cities
+
+
   // Replace "Lahore" with the selected country in station elements
   station.forEach((element) => {
     let originalText = element.getAttribute("data-original");

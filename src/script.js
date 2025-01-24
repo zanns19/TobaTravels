@@ -6,6 +6,7 @@ const Millat = document.querySelector('.Millat')
 const Pakistan = document.querySelector('.Pakistan')
 const Rehman = document.querySelector('.Rehman')
 const hide = document.querySelector('.trainhide');
+const body = document.querySelector('.body');
 
 
 // Select all elements with the class "station"
@@ -101,6 +102,7 @@ function updateName(selectedLi) {
     return removeHiddenCount;
   }
   hide.classList.remove('hidden');
+  body.classList.remove('overflow-hidden');
 
 
   // Adding Cities

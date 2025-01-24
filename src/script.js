@@ -107,8 +107,7 @@ function updateName(selectedLi) {
 
   // Adding Cities
 
-  // train.classList.remove('hidden');
-
+  
   if (selectedLi.innerText === "LAHORE JN") {
     Millat.classList.add('hidden');
     Pakistan.classList.add('hidden');
@@ -2213,6 +2212,559 @@ function updateName(selectedLi) {
       el.textContent = `(---${count} Trains Found---)`;
     })
   }
+  else if (selectedLi.innerText === "RAWALPINDI") {
+    const count = trackRemoveHidden(() => {
+
+
+      // Shalimar
+      Shalimar.classList.add('hidden');
+      // Karakoram
+      Karakoram.classList.add('hidden');
+
+      //  Pakistan
+      Pakistan.classList.remove('hidden');
+
+      asp.forEach((ele) => {
+        ele.textContent = "2150";
+      })
+      ebp.forEach((ele) => {
+        ele.textContent = "1400";
+      })
+      esp.forEach((ele) => {
+        ele.textContent = "1350";
+      })
+
+      //  MILLAT
+      Millat.classList.add('hidden');
+      
+      //  Rehman Baba
+      Rehman.classList.remove('hidden');
+      abr.forEach((ele) => {
+        ele.textContent = "2900";
+      })
+      asr.forEach((ele) => {
+        ele.textContent = "-";
+      })
+      ebr.forEach((ele) => {
+        ele.textContent = "1350";
+      })
+      esr.forEach((ele) => {
+        ele.textContent = "1300";
+
+      })
+
+    })
+
+    train.forEach((el) => {
+      el.textContent = `(---${count} Trains Found---)`;
+    })
+  }
+  else if (selectedLi.innerText === "ATTOCK CITY JN") {
+    const count = trackRemoveHidden(() => {
+
+
+      // Shalimar
+      Shalimar.classList.add('hidden');
+      // Karakoram
+      Karakoram.classList.add('hidden');
+
+      //  Pakistan
+      Pakistan.classList.add('hidden');
+
+      //  MILLAT
+      Millat.classList.add('hidden');
+      
+      //  Rehman Baba
+      Rehman.classList.remove('hidden');
+      abr.forEach((ele) => {
+        ele.textContent = "3700";
+      })
+      asr.forEach((ele) => {
+        ele.textContent = "-";
+      })
+      ebr.forEach((ele) => {
+        ele.textContent = "1800";
+      })
+      esr.forEach((ele) => {
+        ele.textContent = "1700";
+
+      })
+
+    })
+
+    train.forEach((el) => {
+      el.textContent = `(---${count} Trains Found---)`;
+    })
+  }
+  else if (selectedLi.innerText === "JAHANGIRA ROAD") {
+    const count = trackRemoveHidden(() => {
+
+
+      // Shalimar
+      Shalimar.classList.add('hidden');
+      // Karakoram
+      Karakoram.classList.add('hidden');
+
+      //  Pakistan
+      Pakistan.classList.add('hidden');
+
+      //  MILLAT
+      Millat.classList.add('hidden');
+      
+      //  Rehman Baba
+      Rehman.classList.remove('hidden');
+      abr.forEach((ele) => {
+        ele.textContent = "3700";
+      })
+      asr.forEach((ele) => {
+        ele.textContent = "-";
+      })
+      ebr.forEach((ele) => {
+        ele.textContent = "1800";
+      })
+      esr.forEach((ele) => {
+        ele.textContent = "1700";
+
+      })
+
+    })
+
+    train.forEach((el) => {
+      el.textContent = `(---${count} Trains Found---)`;
+    })
+  }
+  else if (selectedLi.innerText === "NOWSHERA JN") {
+    const count = trackRemoveHidden(() => {
+
+
+      // Shalimar
+      Shalimar.classList.add('hidden');
+      // Karakoram
+      Karakoram.classList.add('hidden');
+
+      //  Pakistan
+      Pakistan.classList.add('hidden');
+
+      //  MILLAT
+      Millat.classList.add('hidden');
+      
+      //  Rehman Baba
+      Rehman.classList.remove('hidden');
+      abr.forEach((ele) => {
+        ele.textContent = "3700";
+      })
+      asr.forEach((ele) => {
+        ele.textContent = "-";
+      })
+      ebr.forEach((ele) => {
+        ele.textContent = "1800";
+      })
+      esr.forEach((ele) => {
+        ele.textContent = "1700";
+
+      })
+
+    })
+
+    train.forEach((el) => {
+      el.textContent = `(---${count} Trains Found---)`;
+    })
+  }
+  else if (selectedLi.innerText === "PESHAWAR CITY") {
+    const count = trackRemoveHidden(() => {
+
+
+      // Shalimar
+      Shalimar.classList.add('hidden');
+      // Karakoram
+      Karakoram.classList.add('hidden');
+
+      //  Pakistan
+      Pakistan.classList.add('hidden');
+
+      //  MILLAT
+      Millat.classList.add('hidden');
+      
+      //  Rehman Baba
+      Rehman.classList.remove('hidden');
+      abr.forEach((ele) => {
+        ele.textContent = "3700";
+      })
+      asr.forEach((ele) => {
+        ele.textContent = "-";
+      })
+      ebr.forEach((ele) => {
+        ele.textContent = "1850";
+      })
+      esr.forEach((ele) => {
+        ele.textContent = "1750";
+
+      })
+
+    })
+
+    train.forEach((el) => {
+      el.textContent = `(---${count} Trains Found---)`;
+    })
+  }
+  else if (selectedLi.innerText === "PESHAWAR CANTT") {
+    const count = trackRemoveHidden(() => {
+
+
+      // Shalimar
+      Shalimar.classList.add('hidden');
+      // Karakoram
+      Karakoram.classList.add('hidden');
+
+      //  Pakistan
+      Pakistan.classList.add('hidden');
+
+      //  MILLAT
+      Millat.classList.add('hidden');
+      
+      //  Rehman Baba
+      Rehman.classList.remove('hidden');
+      abr.forEach((ele) => {
+        ele.textContent = "3700";
+      })
+      asr.forEach((ele) => {
+        ele.textContent = "-";
+      })
+      ebr.forEach((ele) => {
+        ele.textContent = "1850";
+      })
+      esr.forEach((ele) => {
+        ele.textContent = "1750";
+
+      })
+
+    })
+
+    train.forEach((el) => {
+      el.textContent = `(---${count} Trains Found---)`;
+    })
+  }
+  else if (selectedLi.innerText === "CHINIOT") {
+    const count = trackRemoveHidden(() => {
+
+      //  Rehman Baba
+      Rehman.classList.add('hidden');
+      // Shalimar
+      Shalimar.classList.add('hidden');
+      // Karakoram
+      Karakoram.classList.add('hidden');
+
+      //  Pakistan
+      Pakistan.classList.add('hidden');
+
+      //  MILLAT
+      Millat.classList.remove('hidden');
+      abm.forEach((ele) => {
+        ele.textContent = "-";
+      })
+      ebm.forEach((ele) => {
+        ele.textContent = "400";
+      })
+      esm.forEach((ele) => {
+        ele.textContent = "350";
+      })
+
+
+    })
+
+    train.forEach((el) => {
+      el.textContent = `(---${count} Trains Found---)`;
+    })
+  }
+  else if (selectedLi.innerText === "CHANAB NAGAR") {
+    const count = trackRemoveHidden(() => {
+
+      //  Rehman Baba
+      Rehman.classList.add('hidden');
+      // Shalimar
+      Shalimar.classList.add('hidden');
+      // Karakoram
+      Karakoram.classList.add('hidden');
+
+      //  Pakistan
+      Pakistan.classList.add('hidden');
+
+      //  MILLAT
+      Millat.classList.remove('hidden');
+      abm.forEach((ele) => {
+        ele.textContent = "-";
+      })
+      ebm.forEach((ele) => {
+        ele.textContent = "450";
+      })
+      esm.forEach((ele) => {
+        ele.textContent = "400";
+      })
+
+
+    })
+
+    train.forEach((el) => {
+      el.textContent = `(---${count} Trains Found---)`;
+    })
+  }
+  else if (selectedLi.innerText === "SHAHINABAD JN") {
+    const count = trackRemoveHidden(() => {
+
+      //  Rehman Baba
+      Rehman.classList.add('hidden');
+      // Shalimar
+      Shalimar.classList.add('hidden');
+      // Karakoram
+      Karakoram.classList.add('hidden');
+
+      //  Pakistan
+      Pakistan.classList.add('hidden');
+
+      //  MILLAT
+      Millat.classList.remove('hidden');
+      abm.forEach((ele) => {
+        ele.textContent = "-";
+      })
+      ebm.forEach((ele) => {
+        ele.textContent = "600";
+      })
+      esm.forEach((ele) => {
+        ele.textContent = "550";
+      })
+
+
+    })
+
+    train.forEach((el) => {
+      el.textContent = `(---${count} Trains Found---)`;
+    })
+  }
+  else if (selectedLi.innerText === "SARGODHA JN") {
+    const count = trackRemoveHidden(() => {
+
+      //  Rehman Baba
+      Rehman.classList.add('hidden');
+      // Shalimar
+      Shalimar.classList.add('hidden');
+      // Karakoram
+      Karakoram.classList.add('hidden');
+
+      //  Pakistan
+      Pakistan.classList.add('hidden');
+
+      //  MILLAT
+      Millat.classList.remove('hidden');
+      abm.forEach((ele) => {
+        ele.textContent = "-";
+      })
+      ebm.forEach((ele) => {
+        ele.textContent = "700";
+      })
+      esm.forEach((ele) => {
+        ele.textContent = "650";
+      })
+
+
+    })
+
+    train.forEach((el) => {
+      el.textContent = `(---${count} Trains Found---)`;
+    })
+  }
+  else if (selectedLi.innerText === "BHALWAL") {
+    const count = trackRemoveHidden(() => {
+
+      //  Rehman Baba
+      Rehman.classList.add('hidden');
+      // Shalimar
+      Shalimar.classList.add('hidden');
+      // Karakoram
+      Karakoram.classList.add('hidden');
+
+      //  Pakistan
+      Pakistan.classList.add('hidden');
+
+      //  MILLAT
+      Millat.classList.remove('hidden');
+      abm.forEach((ele) => {
+        ele.textContent = "-";
+      })
+      ebm.forEach((ele) => {
+        ele.textContent = "800";
+      })
+      esm.forEach((ele) => {
+        ele.textContent = "750";
+      })
+
+
+    })
+
+    train.forEach((el) => {
+      el.textContent = `(---${count} Trains Found---)`;
+    })
+  }
+  else if (selectedLi.innerText === "PHULARWAN") { 
+    const count = trackRemoveHidden(() => {
+
+      //  Rehman Baba
+      Rehman.classList.add('hidden');
+      // Shalimar
+      Shalimar.classList.add('hidden');
+      // Karakoram
+      Karakoram.classList.add('hidden');
+
+      //  Pakistan
+      Pakistan.classList.add('hidden');
+
+      //  MILLAT
+      Millat.classList.remove('hidden');
+      abm.forEach((ele) => {
+        ele.textContent = "-";
+      })
+      ebm.forEach((ele) => {
+        ele.textContent = "800";
+      })
+      esm.forEach((ele) => {
+        ele.textContent = "750";
+      })
+
+
+    })
+
+    train.forEach((el) => {
+      el.textContent = `(---${count} Trains Found---)`;
+    })
+  }
+  else if (selectedLi.innerText === "MALAKAWAL JN") { 
+    const count = trackRemoveHidden(() => {
+
+      //  Rehman Baba
+      Rehman.classList.add('hidden');
+      // Shalimar
+      Shalimar.classList.add('hidden');
+      // Karakoram
+      Karakoram.classList.add('hidden');
+
+      //  Pakistan
+      Pakistan.classList.add('hidden');
+
+      //  MILLAT
+      Millat.classList.remove('hidden');
+      abm.forEach((ele) => {
+        ele.textContent = "-";
+      })
+      ebm.forEach((ele) => {
+        ele.textContent = "1000";
+      })
+      esm.forEach((ele) => {
+        ele.textContent = "950";
+      })
+
+
+    })
+
+    train.forEach((el) => {
+      el.textContent = `(---${count} Trains Found---)`;
+    })
+  }
+  else if (selectedLi.innerText === "MANDI BAHA UD DIN") { 
+    const count = trackRemoveHidden(() => {
+
+      //  Rehman Baba
+      Rehman.classList.add('hidden');
+      // Shalimar
+      Shalimar.classList.add('hidden');
+      // Karakoram
+      Karakoram.classList.add('hidden');
+
+      //  Pakistan
+      Pakistan.classList.add('hidden');
+
+      //  MILLAT
+      Millat.classList.remove('hidden');
+      abm.forEach((ele) => {
+        ele.textContent = "-";
+      })
+      ebm.forEach((ele) => {
+        ele.textContent = "1150";
+      })
+      esm.forEach((ele) => {
+        ele.textContent = "1100";
+      })
+
+
+    })
+
+    train.forEach((el) => {
+      el.textContent = `(---${count} Trains Found---)`;
+    })
+  }
+  else if (selectedLi.innerText === "CHILIANWALA") { 
+    const count = trackRemoveHidden(() => {
+
+      //  Rehman Baba
+      Rehman.classList.add('hidden');
+      // Shalimar
+      Shalimar.classList.add('hidden');
+      // Karakoram
+      Karakoram.classList.add('hidden');
+
+      //  Pakistan
+      Pakistan.classList.add('hidden');
+
+      //  MILLAT
+      Millat.classList.remove('hidden');
+      abm.forEach((ele) => {
+        ele.textContent = "-";
+      })
+      ebm.forEach((ele) => {
+        ele.textContent = "1150";
+      })
+      esm.forEach((ele) => {
+        ele.textContent = "1100";
+      })
+
+
+    })
+
+    train.forEach((el) => {
+      el.textContent = `(---${count} Trains Found---)`;
+    })
+  }
+  else if (selectedLi.innerText === "DINGA") { 
+    const count = trackRemoveHidden(() => {
+
+      //  Rehman Baba
+      Rehman.classList.add('hidden');
+      // Shalimar
+      Shalimar.classList.add('hidden');
+      // Karakoram
+      Karakoram.classList.add('hidden');
+
+      //  Pakistan
+      Pakistan.classList.add('hidden');
+
+      //  MILLAT
+      Millat.classList.remove('hidden');
+      abm.forEach((ele) => {
+        ele.textContent = "-";
+      })
+      ebm.forEach((ele) => {
+        ele.textContent = "1150";
+      })
+      esm.forEach((ele) => {
+        ele.textContent = "1100";
+      })
+
+
+    })
+
+    train.forEach((el) => {
+      el.textContent = `(---${count} Trains Found---)`;
+    })
+  }
+ 
   // Ending of cities
 
 
@@ -2240,7 +2792,7 @@ searchInp.addEventListener("keyup", () => {
     ? filteredCountries
       .map((data) => `<li onclick="updateName(this)">${data}</li>`)
       .join("")
-    : `<p>Oops! Country not found</p>`;
+    : `<p>Oops! City not found</p>`;
 });
 
 // Toggle dropdown visibility

@@ -7,6 +7,7 @@ const Pakistan = document.querySelector('.Pakistan')
 const Rehman = document.querySelector('.Rehman')
 const hide = document.querySelector('.trainhide');
 const body = document.querySelector('.body');
+const logo =document.querySelector('.logo');
 
 
 // Select all elements with the class "station"
@@ -40,6 +41,16 @@ let ebr = document.querySelectorAll('.ebr')
 let esr = document.querySelectorAll('.esr')
 
 
+logo.addEventListener("click",()=>{ 
+  Shalimar.classList.add('hidden');
+  Karakoram.classList.add('hidden');
+  Millat.classList.add('hidden');
+  Pakistan.classList.add('hidden');
+  Rehman.classList.add('hidden');
+  hide.classList.add('hidden');
+  selectBtn.firstElementChild.innerText = "Select City";
+
+})
 
 // Store the original text in a data attribute
 station.forEach((element) => {

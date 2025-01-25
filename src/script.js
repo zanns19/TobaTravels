@@ -68,7 +68,7 @@ const wrapper = document.querySelector(".wrapper"),
 
 
 // List of countries
-let countries = ["ABDUL HAKIM", "ALIPUR CHATA", "ATTOCK CITY JN", "BAHAWALPUR", "BANDHI", "BHALWAL", "BHIRIA ROAD", "CHAK JHUMRA JN", "CHAK LALA", "CHANAB NAGAR", "CHILIANWALA", "CHINIOT", "DAUR", "DINA", "DINGA", "DRIGH ROAD", "DUNYA PUR", "FAISALABAD", "GHOTKI", "GOJRA", "GUJAR KHAN", "GUJRAT", "HAFIZADAD", "HYDERABAD JN", "JAHANGIRA ROAD", "JAHANIA", "JHELUM", "KARACHI CANTT", "KHAIRPUR", "KHANEWAL JN", "KHANPUR JN", "LAHORE JN", "LAKHA ROAD", "LALA MUSA JN", "LANDHI JN", "LODHRAN JN", "MAHRABPUR", "MALAKAWAL JN", "MANDI BAHA UD DIN", "MULTAN CANTT", "NAWABSHAH JN", "NOWSHERA JN", "PADIDAN", "PANO AKIL", "PESHAWAR CANTT", "PESHAWAR CITY", "PHULARWAN", "RAHIM YAR KHAN", "RAWALPINDI", "ROHRI JN", "SADIKABAD", "SAMASATA JN", "SANGLA HILL", "SARGODHA JN", "SETHARJA", "SHAHDADPUR", "SHAHINABAD JN", "SHORKOT CANTT JN", "SUKHEKE", "TANDO ADAM", "WAZIRABAD JN"
+let countries = ["ABDUL HAKIM", "ALIPUR CHATA", "ATTOCK CITY JN", "BAHAWALPUR", "BANDHI", "BHALWAL", "BHIRIA ROAD", "CHAK JHUMRA JN", "CHAK LALA", "CHANAB NAGAR", "CHILIANWALA", "CHINIOT", "DAUR", "DINA", "DINGA", "DRIGH ROAD", "DUNYA PUR", "FAISALABAD", "GHOTKI", "GOJRA", "GUJAR KHAN", "GUJRAT", "HAFIZADAD", "HYDERABAD JN", "JAHANGIRA ROAD", "JAHANIA", "JHELUM", "KARACHI CANTT", "KHANEWAL JN", "KHANPUR JN", "LAHORE JN", "LAKHA ROAD", "LALA MUSA JN", "LANDHI JN", "LODHRAN JN", "MAHRABPUR", "MALAKAWAL JN", "MANDI BAHA UD DIN", "MULTAN CANTT", "NAWABSHAH JN", "NOWSHERA JN", "PADIDAN", "PANO AKIL", "PESHAWAR CANTT", "PESHAWAR CITY", "PHULARWAN", "RAHIM YAR KHAN", "RAWALPINDI", "ROHRI JN", "SADIKABAD", "SAMASATA JN", "SANGLA HILL", "SARGODHA JN", "SETHARJA", "SHAHDADPUR", "SHAHINABAD JN", "SHORKOT CANTT JN", "SUKHEKE", "TANDO ADAM", "WAZIRABAD JN"
 
 ];
 
@@ -213,13 +213,13 @@ function updateName(selectedLi) {
       Pakistan.classList.remove('hidden');
 
       asp.forEach((ele) => {
-        ele.textContent = "4800";
+        ele.textContent = "5050";
       })
       ebp.forEach((ele) => {
-        ele.textContent = "2850";
+        ele.textContent = "3000";
       })
       esp.forEach((ele) => {
-        ele.textContent = "2750";
+        ele.textContent = "2900";
       })
 
       //  Rehman Baba
@@ -693,6 +693,38 @@ function updateName(selectedLi) {
       esr.forEach((ele) => {
         ele.textContent = "1950";
       })
+    })
+
+    train.forEach((el) => {
+      el.textContent = `(---${count} Trains Found---)`;
+    })
+  }
+  else if (selectedLi.innerText === "BANDHI") { 
+    const count = trackRemoveHidden(() => {
+
+      //  Rehman Baba
+      Rehman.classList.add('hidden');
+      // Shalimar
+      Shalimar.classList.add('hidden');
+      // Karakoram
+      Karakoram.classList.add('hidden');
+
+      //  Pakistan
+      Pakistan.classList.add('hidden');
+
+      //  MILLAT
+      Millat.classList.remove('hidden');
+      abm.forEach((ele) => {
+        ele.textContent = "5000";
+      })
+      ebm.forEach((ele) => {
+        ele.textContent = "2150";
+      })
+      esm.forEach((ele) => {
+        ele.textContent = "2050";
+      })
+
+
     })
 
     train.forEach((el) => {

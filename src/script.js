@@ -553,7 +553,7 @@ function updateName(selectedLi) {
     })
 
     train.forEach((el) => {
-      el.textContent = `(---${count} Trains Found---)`;
+      el.textContent = `(---${count} Train Found---)`;
     })
 
   }
@@ -728,7 +728,7 @@ function updateName(selectedLi) {
     })
 
     train.forEach((el) => {
-      el.textContent = `(---${count} Trains Found---)`;
+      el.textContent = `(---${count} Train Found---)`;
     })
   }
   else if (selectedLi.innerText === "BHIRIA ROAD") {
@@ -803,7 +803,7 @@ function updateName(selectedLi) {
     })
 
     train.forEach((el) => {
-      el.textContent = `(---${count} Trains Found---)`;
+      el.textContent = `(---${count} Train Found---)`;
     })
   }
   else if (selectedLi.innerText === "MAHRABPUR") {
@@ -878,7 +878,7 @@ function updateName(selectedLi) {
     })
 
     train.forEach((el) => {
-      el.textContent = `(---${count} Trains Found---)`;
+      el.textContent = `(---${count} Train Found---)`;
     })
   }
   else if (selectedLi.innerText === "ROHRI JN") {
@@ -991,7 +991,7 @@ function updateName(selectedLi) {
     })
 
     train.forEach((el) => {
-      el.textContent = `(---${count} Trains Found---)`;
+      el.textContent = `(---${count} Train Found---)`;
     })
   }
   else if (selectedLi.innerText === "GHOTKI") {
@@ -1245,7 +1245,7 @@ function updateName(selectedLi) {
     })
 
     train.forEach((el) => {
-      el.textContent = `(---${count} Trains Found---)`;
+      el.textContent = `(---${count} Train Found---)`;
     })
 
   }
@@ -1358,7 +1358,7 @@ function updateName(selectedLi) {
     })
 
     train.forEach((el) => {
-      el.textContent = `(---${count} Trains Found---)`;
+      el.textContent = `(---${count} Train Found---)`;
     })
   }
   else if (selectedLi.innerText === "DUNYA PUR") {
@@ -1390,7 +1390,7 @@ function updateName(selectedLi) {
     })
 
     train.forEach((el) => {
-      el.textContent = `(---${count} Trains Found---)`;
+      el.textContent = `(---${count} Train Found---)`;
     })
   }
   else if (selectedLi.innerText === "JAHANIA") {
@@ -1422,7 +1422,7 @@ function updateName(selectedLi) {
     })
 
     train.forEach((el) => {
-      el.textContent = `(---${count} Trains Found---)`;
+      el.textContent = `(---${count} Train Found---)`;
     })
   }
   else if (selectedLi.innerText === "MULTAN CANTT") {
@@ -1889,7 +1889,7 @@ function updateName(selectedLi) {
     })
 
     train.forEach((el) => {
-      el.textContent = `(---${count} Trains Found---)`;
+      el.textContent = `(---${count} Train Found---)`;
     })
   }
   else if (selectedLi.innerText === "HAFIZABAD") {
@@ -2061,7 +2061,7 @@ function updateName(selectedLi) {
     })
 
     train.forEach((el) => {
-      el.textContent = `(---${count} Trains Found---)`;
+      el.textContent = `(---${count} Train Found---)`;
     })
   }
   else if (selectedLi.innerText === "LALA MUSA JN") {
@@ -2150,7 +2150,7 @@ function updateName(selectedLi) {
     })
 
     train.forEach((el) => {
-      el.textContent = `(---${count} Trains Found---)`;
+      el.textContent = `(---${count} Train Found---)`;
     })
   }
   else if (selectedLi.innerText === "DINA") {
@@ -2184,7 +2184,7 @@ function updateName(selectedLi) {
     })
 
     train.forEach((el) => {
-      el.textContent = `(---${count} Trains Found---)`;
+      el.textContent = `(---${count} Train Found---)`;
     })
   }
   else if (selectedLi.innerText === "GUJAR KHAN") {
@@ -2218,7 +2218,7 @@ function updateName(selectedLi) {
     })
 
     train.forEach((el) => {
-      el.textContent = `(---${count} Trains Found---)`;
+      el.textContent = `(---${count} Train Found---)`;
     })
   }
   else if (selectedLi.innerText === "CHAK LALA") {
@@ -2252,7 +2252,7 @@ function updateName(selectedLi) {
     })
 
     train.forEach((el) => {
-      el.textContent = `(---${count} Trains Found---)`;
+      el.textContent = `(---${count} Train Found---)`;
     })
   }
   else if (selectedLi.innerText === "RAWALPINDI") {
@@ -2336,7 +2336,7 @@ function updateName(selectedLi) {
     })
 
     train.forEach((el) => {
-      el.textContent = `(---${count} Trains Found---)`;
+      el.textContent = `(---${count} Train Found---)`;
     })
   }
   else if (selectedLi.innerText === "JAHANGIRA ROAD") {
@@ -2373,7 +2373,7 @@ function updateName(selectedLi) {
     })
 
     train.forEach((el) => {
-      el.textContent = `(---${count} Trains Found---)`;
+      el.textContent = `(---${count} Train Found---)`;
     })
   }
   else if (selectedLi.innerText === "NOWSHERA JN") {
@@ -2410,7 +2410,7 @@ function updateName(selectedLi) {
     })
 
     train.forEach((el) => {
-      el.textContent = `(---${count} Trains Found---)`;
+      el.textContent = `(---${count} Train Found---)`;
     })
   }
   else if (selectedLi.innerText === "PESHAWAR CITY") {
@@ -2447,7 +2447,7 @@ function updateName(selectedLi) {
     })
 
     train.forEach((el) => {
-      el.textContent = `(---${count} Trains Found---)`;
+      el.textContent = `(---${count} Train Found---)`;
     })
   }
   else if (selectedLi.innerText === "PESHAWAR CANTT") {
@@ -2484,7 +2484,7 @@ function updateName(selectedLi) {
     })
 
     train.forEach((el) => {
-      el.textContent = `(---${count} Trains Found---)`;
+      el.textContent = `(---${count} Train Found---)`;
     })
   }
   else if (selectedLi.innerText === "CHINIOT") {
@@ -2516,7 +2516,7 @@ function updateName(selectedLi) {
     })
 
     train.forEach((el) => {
-      el.textContent = `(---${count} Trains Found---)`;
+      el.textContent = `(---${count} Train Found---)`;
     })
   }
   else if (selectedLi.innerText === "CHANAB NAGAR") {
@@ -2548,7 +2548,7 @@ function updateName(selectedLi) {
     })
 
     train.forEach((el) => {
-      el.textContent = `(---${count} Trains Found---)`;
+      el.textContent = `(---${count} Train Found---)`;
     })
   }
   else if (selectedLi.innerText === "SHAHINABAD JN") {
@@ -2580,7 +2580,7 @@ function updateName(selectedLi) {
     })
 
     train.forEach((el) => {
-      el.textContent = `(---${count} Trains Found---)`;
+      el.textContent = `(---${count} Train Found---)`;
     })
   }
   else if (selectedLi.innerText === "SARGODHA JN") {
@@ -2612,7 +2612,7 @@ function updateName(selectedLi) {
     })
 
     train.forEach((el) => {
-      el.textContent = `(---${count} Trains Found---)`;
+      el.textContent = `(---${count} Train Found---)`;
     })
   }
   else if (selectedLi.innerText === "BHALWAL") {
@@ -2644,7 +2644,7 @@ function updateName(selectedLi) {
     })
 
     train.forEach((el) => {
-      el.textContent = `(---${count} Trains Found---)`;
+      el.textContent = `(---${count} Train Found---)`;
     })
   }
   else if (selectedLi.innerText === "PHULARWAN") { 
@@ -2676,7 +2676,7 @@ function updateName(selectedLi) {
     })
 
     train.forEach((el) => {
-      el.textContent = `(---${count} Trains Found---)`;
+      el.textContent = `(---${count} Train Found---)`;
     })
   }
   else if (selectedLi.innerText === "MALAKAWAL JN") { 
@@ -2708,7 +2708,7 @@ function updateName(selectedLi) {
     })
 
     train.forEach((el) => {
-      el.textContent = `(---${count} Trains Found---)`;
+      el.textContent = `(---${count} Train Found---)`;
     })
   }
   else if (selectedLi.innerText === "MANDI BAHA UD DIN") { 
@@ -2740,7 +2740,7 @@ function updateName(selectedLi) {
     })
 
     train.forEach((el) => {
-      el.textContent = `(---${count} Trains Found---)`;
+      el.textContent = `(---${count} Train Found---)`;
     })
   }
   else if (selectedLi.innerText === "CHILIANWALA") { 
@@ -2772,7 +2772,7 @@ function updateName(selectedLi) {
     })
 
     train.forEach((el) => {
-      el.textContent = `(---${count} Trains Found---)`;
+      el.textContent = `(---${count} Train Found---)`;
     })
   }
   else if (selectedLi.innerText === "DINGA") { 
@@ -2804,7 +2804,7 @@ function updateName(selectedLi) {
     })
 
     train.forEach((el) => {
-      el.textContent = `(---${count} Trains Found---)`;
+      el.textContent = `(---${count} Train Found---)`;
     })
   }
  

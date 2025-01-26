@@ -41,13 +41,14 @@ let ebr = document.querySelectorAll('.ebr')
 let esr = document.querySelectorAll('.esr')
 
 
-logo.addEventListener("click",()=>{ 
+logo.addEventListener("click",()=> { 
   Shalimar.classList.add('hidden');
   Karakoram.classList.add('hidden');
   Millat.classList.add('hidden');
   Pakistan.classList.add('hidden');
   Rehman.classList.add('hidden');
   hide.classList.add('hidden');
+  body.classList.add('overflow-hidden');
   selectBtn.firstElementChild.innerText = "Select City";
 
 })

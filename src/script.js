@@ -68,7 +68,7 @@ const wrapper = document.querySelector(".wrapper"),
 
 
 // List of countries
-let countries = ["ABDUL HAKIM", "ALIPUR CHATA", "ATTOCK CITY JN", "BAHAWALPUR", "BANDHI", "BHALWAL", "BHIRIA ROAD", "CHAK JHUMRA JN", "CHAK LALA", "CHANAB NAGAR", "CHILIANWALA", "CHINIOT", "DAUR", "DINA", "DINGA", "DRIGH ROAD", "DUNYA PUR", "FAISALABAD", "GHOTKI", "GOJRA", "GUJAR KHAN", "GUJRAT", "HAFIZADAD", "HYDERABAD JN", "JAHANGIRA ROAD", "JAHANIA", "JHELUM", "KARACHI CANTT", "KHANEWAL JN", "KHANPUR JN", "LAHORE JN", "LAKHA ROAD", "LALA MUSA JN", "LANDHI JN", "LODHRAN JN", "MAHRABPUR", "MALAKAWAL JN", "MANDI BAHA UD DIN", "MULTAN CANTT", "NAWABSHAH JN", "NOWSHERA JN", "PADIDAN", "PANO AKIL", "PESHAWAR CANTT", "PESHAWAR CITY", "PHULARWAN", "RAHIM YAR KHAN", "RAWALPINDI", "ROHRI JN", "SADIKABAD", "SAMASATA JN", "SANGLA HILL", "SARGODHA JN", "SETHARJA", "SHAHDADPUR", "SHAHINABAD JN", "SHORKOT CANTT JN", "SUKHEKE", "TANDO ADAM", "WAZIRABAD JN"
+let countries = ["ABDUL HAKIM", "ALIPUR CHATA", "ATTOCK CITY JN", "BAHAWALPUR", "BANDHI", "BHALWAL", "BHIRIA ROAD", "CHAK JHUMRA JN", "CHAK LALA", "CHANAB NAGAR", "CHILIANWALA", "CHINIOT", "DAUR", "DINA", "DINGA", "DRIGH ROAD", "DUNYA PUR", "FAISALABAD", "GHOTKI", "GOJRA", "GUJAR KHAN", "GUJRAT", "HAFIZABAD", "HYDERABAD JN", "JAHANGIRA ROAD", "JAHANIA", "JHELUM", "KARACHI CANTT", "KHANEWAL JN", "KHANPUR JN", "LAHORE JN", "LAKHA ROAD", "LALA MUSA JN", "LANDHI JN", "LODHRAN JN", "MAHRABPUR", "MALAKAWAL JN", "MANDI BAHA UD DIN", "MULTAN CANTT", "NAWABSHAH JN", "NOWSHERA JN", "PADIDAN", "PANO AKIL", "PESHAWAR CANTT", "PESHAWAR CITY", "PHULARWAN", "RAHIM YAR KHAN", "RAWALPINDI", "ROHRI JN", "SADIKABAD", "SAMASATA JN", "SANGLA HILL", "SARGODHA JN", "SETHARJA", "SHAHDADPUR", "SHAHINABAD JN", "SHORKOT CANTT JN", "SUKHEKE", "TANDO ADAM", "WAZIRABAD JN"
 
 ];
 
@@ -225,16 +225,16 @@ function updateName(selectedLi) {
       //  Rehman Baba
       Rehman.classList.remove('hidden');
       abr.forEach((ele) => {
-        ele.textContent = "6350";
+        ele.textContent = "6700";
       })
       asr.forEach((ele) => {
-        ele.textContent = "4800";
+        ele.textContent = "5050";
       })
       ebr.forEach((ele) => {
-        ele.textContent = "2850";
+        ele.textContent = "3000";
       })
       esr.forEach((ele) => {
-        ele.textContent = "2750";
+        ele.textContent = "2900";
       })
     })
 
@@ -295,28 +295,28 @@ function updateName(selectedLi) {
       Pakistan.classList.remove('hidden');
 
       asp.forEach((ele) => {
-        ele.textContent = "4800";
+        ele.textContent = "5050";
       })
       ebp.forEach((ele) => {
-        ele.textContent = "2850";
+        ele.textContent = "3000";
       })
       esp.forEach((ele) => {
-        ele.textContent = "2750";
+        ele.textContent = "2900";
       })
 
       //  Rehman Baba
       Rehman.classList.remove('hidden');
       abr.forEach((ele) => {
-        ele.textContent = "6350";
+        ele.textContent = "6700";
       })
       asr.forEach((ele) => {
-        ele.textContent = "4800";
+        ele.textContent = "5050";
       })
       ebr.forEach((ele) => {
-        ele.textContent = "2850";
+        ele.textContent = "3000";
       })
       esr.forEach((ele) => {
-        ele.textContent = "2750";
+        ele.textContent = "2900";
       })
     })
 
@@ -376,28 +376,28 @@ function updateName(selectedLi) {
       Pakistan.classList.remove('hidden');
 
       asp.forEach((ele) => {
-        ele.textContent = "4700";
+        ele.textContent = "4950";
       })
       ebp.forEach((ele) => {
-        ele.textContent = "2850";
+        ele.textContent = "3000";
       })
       esp.forEach((ele) => {
-        ele.textContent = "2750";
+        ele.textContent = "2900";
       })
 
       //  Rehman Baba
       Rehman.classList.remove('hidden');
       abr.forEach((ele) => {
-        ele.textContent = "6350";
+        ele.textContent = "6700";
       })
       asr.forEach((ele) => {
-        ele.textContent = "4700";
+        ele.textContent = "4950";
       })
       ebr.forEach((ele) => {
-        ele.textContent = "2850";
+        ele.textContent = "3000";
       })
       esr.forEach((ele) => {
-        ele.textContent = "2750";
+        ele.textContent = "2900";
       })
     })
 
@@ -456,28 +456,28 @@ function updateName(selectedLi) {
       Pakistan.classList.remove('hidden');
 
       asp.forEach((ele) => {
-        ele.textContent = "3850";
+        ele.textContent = "4050";
       })
       ebp.forEach((ele) => {
-        ele.textContent = "2250";
+        ele.textContent = "2350";
       })
       esp.forEach((ele) => {
-        ele.textContent = "2150";
+        ele.textContent = "2250";
       })
 
       //  Rehman Baba
       Rehman.classList.remove('hidden');
       abr.forEach((ele) => {
-        ele.textContent = "3850";
+        ele.textContent = "5600";
       })
       asr.forEach((ele) => {
-        ele.textContent = "5300";
+        ele.textContent = "4050";
       })
       ebr.forEach((ele) => {
-        ele.textContent = "2250";
+        ele.textContent = "2350";
       })
       esr.forEach((ele) => {
-        ele.textContent = "2150";
+        ele.textContent = "2250";
       })
     })
 
@@ -498,28 +498,28 @@ function updateName(selectedLi) {
       Pakistan.classList.remove('hidden');
 
       asp.forEach((ele) => {
-        ele.textContent = "3750";
+        ele.textContent = "3950";
       })
       ebp.forEach((ele) => {
-        ele.textContent = "2250";
+        ele.textContent = "2350";
       })
       esp.forEach((ele) => {
-        ele.textContent = "2150";
+        ele.textContent = "2250";
       })
 
       //  Rehman Baba
       Rehman.classList.remove('hidden');
       abr.forEach((ele) => {
-        ele.textContent = "5300";
+        ele.textContent = "5600";
       })
       asr.forEach((ele) => {
-        ele.textContent = "3750";
+        ele.textContent = "3950";
       })
       ebr.forEach((ele) => {
-        ele.textContent = "2250";
+        ele.textContent = "2350";
       })
       esr.forEach((ele) => {
-        ele.textContent = "2150";
+        ele.textContent = "2250";
       })
     })
 
@@ -596,16 +596,16 @@ function updateName(selectedLi) {
       //  Rehman Baba
       Rehman.classList.remove('hidden');
       abr.forEach((ele) => {
-        ele.textContent = "4750";
+        ele.textContent = "5000";
       })
       asr.forEach((ele) => {
-        ele.textContent = "3600";
+        ele.textContent = "3800";
       })
       ebr.forEach((ele) => {
-        ele.textContent = "2050";
+        ele.textContent = "2150";
       })
       esr.forEach((ele) => {
-        ele.textContent = "1950";
+        ele.textContent = "2050";
       })
     })
 
@@ -638,16 +638,16 @@ function updateName(selectedLi) {
       //  Rehman Baba
       Rehman.classList.remove('hidden');
       abr.forEach((ele) => {
-        ele.textContent = "4750";
+        ele.textContent = "5000";
       })
       asr.forEach((ele) => {
-        ele.textContent = "3600";
+        ele.textContent = "3800";
       })
       ebr.forEach((ele) => {
-        ele.textContent = "2050";
+        ele.textContent = "2150";
       })
       esr.forEach((ele) => {
-        ele.textContent = "1950";
+        ele.textContent = "2050";
       })
     })
 
@@ -670,28 +670,28 @@ function updateName(selectedLi) {
       Pakistan.classList.remove('hidden');
 
       asp.forEach((ele) => {
-        ele.textContent = "3550";
+        ele.textContent = "3750";
       })
       ebp.forEach((ele) => {
-        ele.textContent = "2050";
+        ele.textContent = "2150";
       })
       esp.forEach((ele) => {
-        ele.textContent = "1950";
+        ele.textContent = "2050";
       })
 
       //  Rehman Baba
       Rehman.classList.remove('hidden');
       abr.forEach((ele) => {
-        ele.textContent = "4750";
+        ele.textContent = "5000";
       })
       asr.forEach((ele) => {
-        ele.textContent = "3550";
+        ele.textContent = "3750";
       })
       ebr.forEach((ele) => {
-        ele.textContent = "2050";
+        ele.textContent = "2150";
       })
       esr.forEach((ele) => {
-        ele.textContent = "1950";
+        ele.textContent = "2050";
       })
     })
 
@@ -756,16 +756,16 @@ function updateName(selectedLi) {
       //  Rehman Baba
       Rehman.classList.remove('hidden');
       abr.forEach((ele) => {
-        ele.textContent = "4750";
+        ele.textContent = "5000";
       })
       asr.forEach((ele) => {
-        ele.textContent = "3550";
+        ele.textContent = "3750";
       })
       ebr.forEach((ele) => {
-        ele.textContent = "2000";
+        ele.textContent = "2100";
       })
       esr.forEach((ele) => {
-        ele.textContent = "1900";
+        ele.textContent = "2000";
       })
     })
 
@@ -789,16 +789,16 @@ function updateName(selectedLi) {
       //  Rehman Baba
       Rehman.classList.remove('hidden');
       abr.forEach((ele) => {
-        ele.textContent = "4350";
+        ele.textContent = "4600";
       })
       asr.forEach((ele) => {
-        ele.textContent = "3350";
+        ele.textContent = "3750";
       })
       ebr.forEach((ele) => {
-        ele.textContent = "2000";
+        ele.textContent = "2100";
       })
       esr.forEach((ele) => {
-        ele.textContent = "1900";
+        ele.textContent = "2000";
       })
     })
 
@@ -831,16 +831,16 @@ function updateName(selectedLi) {
       //  Rehman Baba
       Rehman.classList.remove('hidden');
       abr.forEach((ele) => {
-        ele.textContent = "4350";
+        ele.textContent = "4600";
       })
       asr.forEach((ele) => {
-        ele.textContent = "3500";
+        ele.textContent = "3700";
       })
       ebr.forEach((ele) => {
-        ele.textContent = "2000";
+        ele.textContent = "2100";
       })
       esr.forEach((ele) => {
-        ele.textContent = "1900";
+        ele.textContent = "2000";
       })
     })
 
@@ -864,16 +864,16 @@ function updateName(selectedLi) {
       //  Rehman Baba
       Rehman.classList.remove('hidden');
       abr.forEach((ele) => {
-        ele.textContent = "4350";
+        ele.textContent = "4600";
       })
       asr.forEach((ele) => {
-        ele.textContent = "3350";
+        ele.textContent = "3500";
       })
       ebr.forEach((ele) => {
-        ele.textContent = "1950";
+        ele.textContent = "2050";
       })
       esr.forEach((ele) => {
-        ele.textContent = "1850";
+        ele.textContent = "1950";
       })
     })
 
@@ -932,28 +932,28 @@ function updateName(selectedLi) {
       Pakistan.classList.remove('hidden');
 
       asp.forEach((ele) => {
-        ele.textContent = "2800";
+        ele.textContent = "2950";
       })
       ebp.forEach((ele) => {
-        ele.textContent = "1850";
+        ele.textContent = "1950";
       })
       esp.forEach((ele) => {
-        ele.textContent = "1750";
+        ele.textContent = "1850";
       })
 
       //  Rehman Baba
       Rehman.classList.remove('hidden');
       abr.forEach((ele) => {
-        ele.textContent = "3700";
+        ele.textContent = "3900";
       })
       asr.forEach((ele) => {
-        ele.textContent = "2800";
+        ele.textContent = "2950";
       })
       ebr.forEach((ele) => {
-        ele.textContent = "1850";
+        ele.textContent = "1950";
       })
       esr.forEach((ele) => {
-        ele.textContent = "1750";
+        ele.textContent = "1850";
       })
     })
 
@@ -977,16 +977,16 @@ function updateName(selectedLi) {
       //  Rehman Baba
       Rehman.classList.remove('hidden');
       abr.forEach((ele) => {
-        ele.textContent = "3700";
+        ele.textContent = "3900";
       })
       asr.forEach((ele) => {
-        ele.textContent = "2750";
+        ele.textContent = "2900";
       })
       ebr.forEach((ele) => {
-        ele.textContent = "1850";
+        ele.textContent = "1950";
       })
       esr.forEach((ele) => {
-        ele.textContent = "1750";
+        ele.textContent = "1850";
       })
     })
 
@@ -1023,28 +1023,28 @@ function updateName(selectedLi) {
       Pakistan.classList.remove('hidden');
 
       asp.forEach((ele) => {
-        ele.textContent = "2750";
+        ele.textContent = "2900";
       })
       ebp.forEach((ele) => {
-        ele.textContent = "1800";
+        ele.textContent = "1900";
       })
       esp.forEach((ele) => {
-        ele.textContent = "1700";
+        ele.textContent = "1800";
       })
 
       //  Rehman Baba
       Rehman.classList.remove('hidden');
       abr.forEach((ele) => {
-        ele.textContent = "3700";
+        ele.textContent = "3900";
       })
       asr.forEach((ele) => {
-        ele.textContent = "2750";
+        ele.textContent = "2900";
       })
       ebr.forEach((ele) => {
-        ele.textContent = "1800";
+        ele.textContent = "1900";
       })
       esr.forEach((ele) => {
-        ele.textContent = "1700";
+        ele.textContent = "1800";
       })
     })
 
@@ -1075,13 +1075,13 @@ function updateName(selectedLi) {
       Pakistan.classList.remove('hidden');
 
       asp.forEach((ele) => {
-        ele.textContent = "2050";
+        ele.textContent = "2150";
       })
       ebp.forEach((ele) => {
-        ele.textContent = "1350";
+        ele.textContent = "1400";
       })
       esp.forEach((ele) => {
-        ele.textContent = "1300";
+        ele.textContent = "1350";
       })
 
       //  Rehman Baba
@@ -1129,28 +1129,28 @@ function updateName(selectedLi) {
       Pakistan.classList.remove('hidden');
 
       asp.forEach((ele) => {
-        ele.textContent = "2050";
+        ele.textContent = "2150";
       })
       ebp.forEach((ele) => {
-        ele.textContent = "1350";
+        ele.textContent = "1400";
       })
       esp.forEach((ele) => {
-        ele.textContent = "1300";
+        ele.textContent = "1350";
       })
 
       //  Rehman Baba
       Rehman.classList.remove('hidden');
       abr.forEach((ele) => {
-        ele.textContent = "2900";
+        ele.textContent = "3050";
       })
       asr.forEach((ele) => {
-        ele.textContent = "2050";
+        ele.textContent = "2150";
       })
       ebr.forEach((ele) => {
-        ele.textContent = "1350";
+        ele.textContent = "1400";
       })
       esr.forEach((ele) => {
-        ele.textContent = "1300";
+        ele.textContent = "1350";
       })
     })
 
@@ -1230,16 +1230,16 @@ function updateName(selectedLi) {
       //  Rehman Baba
       Rehman.classList.remove('hidden');
       abr.forEach((ele) => {
-        ele.textContent = "1950";
+        ele.textContent = "2050";
       })
       asr.forEach((ele) => {
-        ele.textContent = "1500";
+        ele.textContent = "1600";
       })
       ebr.forEach((ele) => {
         ele.textContent = "950";
       })
       esr.forEach((ele) => {
-        ele.textContent = "900";
+        ele.textContent = "1000";
       })
 
     })
@@ -1312,16 +1312,16 @@ function updateName(selectedLi) {
       //  Rehman Baba
       Rehman.classList.remove('hidden');
       abr.forEach((ele) => {
-        ele.textContent = "1350";
+        ele.textContent = "1600";
       })
       asr.forEach((ele) => {
-        ele.textContent = "1500";
+        ele.textContent = "1400";
       })
       ebr.forEach((ele) => {
-        ele.textContent = "950";
+        ele.textContent = "1000";
       })
       esr.forEach((ele) => {
-        ele.textContent = "900";
+        ele.textContent = "950";
       })
     })
 
@@ -1467,10 +1467,10 @@ function updateName(selectedLi) {
       //  Rehman Baba
       Rehman.classList.remove('hidden');
       abr.forEach((ele) => {
-        ele.textContent = "1000";
+        ele.textContent = "1050";
       })
       asr.forEach((ele) => {
-        ele.textContent = "650";
+        ele.textContent = "700";
       })
       ebr.forEach((ele) => {
         ele.textContent = "500";
@@ -1547,7 +1547,7 @@ function updateName(selectedLi) {
       //  Rehman Baba
       Rehman.classList.remove('hidden');
       abr.forEach((ele) => {
-        ele.textContent = "650";
+        ele.textContent = "700";
       })
       asr.forEach((ele) => {
         ele.textContent = "500";
@@ -1753,7 +1753,7 @@ function updateName(selectedLi) {
       //  Rehman Baba
       Rehman.classList.remove('hidden');
       abr.forEach((ele) => {
-        ele.textContent = "650";
+        ele.textContent = "700";
       })
       asr.forEach((ele) => {
         ele.textContent = "400";
@@ -1839,16 +1839,16 @@ function updateName(selectedLi) {
       //  Rehman Baba
       Rehman.classList.remove('hidden');
       abr.forEach((ele) => {
-        ele.textContent = "1000";
+        ele.textContent = "1050";
       })
       asr.forEach((ele) => {
         ele.textContent = "-";
       })
       ebr.forEach((ele) => {
-        ele.textContent = "350";
+        ele.textContent = "400";
       })
       esr.forEach((ele) => {
-        ele.textContent = "400";
+        ele.textContent = "350";
 
       })
 
@@ -1919,16 +1919,16 @@ function updateName(selectedLi) {
       //  Rehman Baba
       Rehman.classList.remove('hidden');
       abr.forEach((ele) => {
-        ele.textContent = "1150";
+        ele.textContent = "1200";
       })
       asr.forEach((ele) => {
         ele.textContent = "-";
       })
       ebr.forEach((ele) => {
-        ele.textContent = "600";
+        ele.textContent = "650";
       })
       esr.forEach((ele) => {
-        ele.textContent = "550";
+        ele.textContent = "600";
 
       })
 
@@ -1965,16 +1965,16 @@ function updateName(selectedLi) {
       //  Rehman Baba
       Rehman.classList.remove('hidden');
       abr.forEach((ele) => {
-        ele.textContent = "1350";
+        ele.textContent = "1400";
       })
       asr.forEach((ele) => {
         ele.textContent = "-";
       })
       ebr.forEach((ele) => {
-        ele.textContent = "700";
+        ele.textContent = "750";
       })
       esr.forEach((ele) => {
-        ele.textContent = "650";
+        ele.textContent = "700";
 
       })
 
@@ -2011,16 +2011,16 @@ function updateName(selectedLi) {
       //  Rehman Baba
       Rehman.classList.remove('hidden');
       abr.forEach((ele) => {
-        ele.textContent = "1500";
+        ele.textContent = "1600";
       })
       asr.forEach((ele) => {
         ele.textContent = "-";
       })
       ebr.forEach((ele) => {
-        ele.textContent = "750";
+        ele.textContent = "800";
       })
       esr.forEach((ele) => {
-        ele.textContent = "700";
+        ele.textContent = "750";
 
       })
 
@@ -2100,13 +2100,13 @@ function updateName(selectedLi) {
       //  Rehman Baba
       Rehman.classList.remove('hidden');
       abr.forEach((ele) => {
-        ele.textContent = "1950";
+        ele.textContent = "2050";
       })
       asr.forEach((ele) => {
         ele.textContent = "-";
       })
       ebr.forEach((ele) => {
-        ele.textContent = "900";
+        ele.textContent = "1000";
       })
       esr.forEach((ele) => {
         ele.textContent = "950";
@@ -2283,16 +2283,16 @@ function updateName(selectedLi) {
       //  Rehman Baba
       Rehman.classList.remove('hidden');
       abr.forEach((ele) => {
-        ele.textContent = "2900";
+        ele.textContent = "3050";
       })
       asr.forEach((ele) => {
         ele.textContent = "-";
       })
       ebr.forEach((ele) => {
-        ele.textContent = "1350";
+        ele.textContent = "1400";
       })
       esr.forEach((ele) => {
-        ele.textContent = "1300";
+        ele.textContent = "1350";
 
       })
 
@@ -2320,16 +2320,16 @@ function updateName(selectedLi) {
       //  Rehman Baba
       Rehman.classList.remove('hidden');
       abr.forEach((ele) => {
-        ele.textContent = "3700";
+        ele.textContent = "3900";
       })
       asr.forEach((ele) => {
         ele.textContent = "-";
       })
       ebr.forEach((ele) => {
-        ele.textContent = "1800";
+        ele.textContent = "1900";
       })
       esr.forEach((ele) => {
-        ele.textContent = "1700";
+        ele.textContent = "1800";
 
       })
 
@@ -2357,16 +2357,16 @@ function updateName(selectedLi) {
       //  Rehman Baba
       Rehman.classList.remove('hidden');
       abr.forEach((ele) => {
-        ele.textContent = "3700";
+        ele.textContent = "3900";
       })
       asr.forEach((ele) => {
         ele.textContent = "-";
       })
       ebr.forEach((ele) => {
-        ele.textContent = "1800";
+        ele.textContent = "1900";
       })
       esr.forEach((ele) => {
-        ele.textContent = "1700";
+        ele.textContent = "1800";
 
       })
 
@@ -2394,16 +2394,16 @@ function updateName(selectedLi) {
       //  Rehman Baba
       Rehman.classList.remove('hidden');
       abr.forEach((ele) => {
-        ele.textContent = "3700";
+        ele.textContent = "3900";
       })
       asr.forEach((ele) => {
         ele.textContent = "-";
       })
       ebr.forEach((ele) => {
-        ele.textContent = "1800";
+        ele.textContent = "1900";
       })
       esr.forEach((ele) => {
-        ele.textContent = "1700";
+        ele.textContent = "1800";
 
       })
 
@@ -2431,16 +2431,16 @@ function updateName(selectedLi) {
       //  Rehman Baba
       Rehman.classList.remove('hidden');
       abr.forEach((ele) => {
-        ele.textContent = "3700";
+        ele.textContent = "3900";
       })
       asr.forEach((ele) => {
         ele.textContent = "-";
       })
       ebr.forEach((ele) => {
-        ele.textContent = "1850";
+        ele.textContent = "1950";
       })
       esr.forEach((ele) => {
-        ele.textContent = "1750";
+        ele.textContent = "1850";
 
       })
 
@@ -2468,16 +2468,16 @@ function updateName(selectedLi) {
       //  Rehman Baba
       Rehman.classList.remove('hidden');
       abr.forEach((ele) => {
-        ele.textContent = "3700";
+        ele.textContent = "3900";
       })
       asr.forEach((ele) => {
         ele.textContent = "-";
       })
       ebr.forEach((ele) => {
-        ele.textContent = "1850";
+        ele.textContent = "1950";
       })
       esr.forEach((ele) => {
-        ele.textContent = "1750";
+        ele.textContent = "1850";
 
       })
 

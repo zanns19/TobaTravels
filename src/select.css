@@ -37,10 +37,10 @@ body{
       width: 12ch; /* Matches the character count of the text */
   }
 }
-/* 
-@keyframes erasing {
+
+/* @keyframes erasing {
   from {
-      width: 15ch;
+      width: 12ch;
   }
   to {
       width: 0;
@@ -52,7 +52,7 @@ body{
       border-color: transparent;
   }
   100% {
-      border-color: rgb(255, 251, 251);
+      border-color: rgb(251, 254, 255);
   }
 }
 

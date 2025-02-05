@@ -193,20 +193,20 @@ function updateName(selectedLi) {
       //  Karakoram
       Karakoram.classList.remove('hidden');
       acbk.forEach((ele) => {
-        ksh1 = "1800"
-        ele.textContent = ksh1;
+        ksh = "1800"
+        ele.textContent = ksh;
       })
       actk.forEach((ele) => {
-        ksh2 = "1400"
-        ele.textContent = ksh2;
+        ksh1 = "1400"
+        ele.textContent = ksh1;
       })
       ebk.forEach((ele) => {
-        ksh3 = "1100"
-        ele.textContent = ksh3;
+        ksh2= "1100"
+        ele.textContent = ksh2;
       })
       esk.forEach((ele) => {
-        ksh4 = "1050"
-        ele.textContent = ksh4;
+        ksh3 = "1050"
+        ele.textContent = ksh3;
       })
     })
 

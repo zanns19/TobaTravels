@@ -1450,16 +1450,16 @@ function updateName(selectedLi) {
       Pakistan.classList.remove('hidden');
 
       asp.forEach((ele) => {
-        rsh = "2050"
-        ele.textContent = rsh;
+        psh = "2050"
+        ele.textContent = psh;
       })
       ebp.forEach((ele) => {
-        rsh1 = "1200"
-        ele.textContent = rsh1;
+        psh1 = "1200"
+        ele.textContent = psh1;
       })
       esp.forEach((ele) => {
-        rsh2 = "1150"
-        ele.textContent = rsh2;
+        psh2 = "1150"
+        ele.textContent = psh2;
       })
 
       //  Rehman Baba
@@ -2153,7 +2153,7 @@ function updateName(selectedLi) {
       Pakistan.classList.remove('hidden');
 
       asp.forEach((ele) => {
-        psh = "500"
+        psh = "501"
         ele.textContent = psh;
       })
       ebp.forEach((ele) => {
@@ -2357,18 +2357,7 @@ function updateName(selectedLi) {
         rsh3="700"
         ele.textContent =rsh3 ;
       })
-      Pakistan.classList.remove('hidden');
-
-      asp.forEach((ele) => {
-        ele.textContent = "1050";
-      })
-      ebp.forEach((ele) => {
-        ele.textContent = "750";
-      })
-      esp.forEach((ele) => {
-        ele.textContent = "700";
-      })
-
+    
       //  MILLAT
       Millat.classList.add('hidden');
       //  Rehman Baba

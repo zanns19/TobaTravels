@@ -8,6 +8,17 @@
 body{
   background: transparent;
 }
+ @media (max-width: 390px) {
+  body {
+    width: 110%;
+  }
+}
+
+@media (min-width: 1280px) and (max-width: 1330px) {
+  body {
+    width: 110%;
+  }
+}  
 /* typewriter */
 /* @media  (max-width:640px) {
   .typewriter{
